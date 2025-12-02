@@ -27,7 +27,7 @@
 
     <!-- HEADER -->
     <header class="w-full fixed top-0 z-50 backdrop-blur-md bg-white/80 shadow-sm">
-        <div class="max-w-7xl mx-auto px-6 py-4 flex justify-between items-center">
+        <div class="max-w-7xl mx-auto px-6 py-2 flex justify-between items-center">
 
             <!-- Logo -->
             <a href="{{ route('home') }}" class="flex items-center space-x-2">
@@ -83,7 +83,7 @@
     </script>
 
     <!-- MAIN CONTENT -->
-    <main class="pt-28">
+    <main class="pt-[4rem]">
         @yield('content')
     </main>
 

@@ -7,8 +7,16 @@
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/remixicon@4.0.0/fonts/remixicon.css">
 
 <!-- HERO SECTION -->
+@php
+// Prefer a local hero image if present, otherwise fall back to a reliable Unsplash image
+$localHero = public_path('images/gen.jpeg');
+$heroUrl = file_exists($localHero)
+? asset('images/gen.jpeg')
+: 'https://images.unsplash.com/photo-1460925895917-adf4ee868993?auto=format&fit=crop&w=1400&q=80';
+@endphp
+
 <section class="relative h-[80vh] bg-cover bg-center flex items-center justify-center"
-    style="background-image: url('https://images.unsplash.com/photo-1518779578993-ec3579fee39f');">
+    style="background-image: url('{{ $heroUrl }}');">
 
     <div class="absolute inset-0 bg-black bg-opacity-60"></div>
 
@@ -18,16 +26,17 @@
         </h1>
 
         <p class="mt-4 text-lg md:text-xl">
-            Empower your enterprise with secure cloud infrastructure, AI-driven applications, and advanced security solutions. Deploy with 99.99% uptime guaranteed.
+            Empower your enterprise with secure cloud infrastructure, AI-driven applications, and advanced security
+            solutions. Deploy with 99.99% uptime guaranteed.
         </p>
 
         <div class="mt-8 flex flex-col md:flex-row gap-4 justify-center">
             <a href="{{ route('services') }}"
-               class="inline-block bg-blue-600 hover:bg-blue-700 text-white px-8 py-3 rounded-lg text-lg font-semibold">
+                class="inline-block bg-blue-600 hover:bg-blue-700 text-white px-8 py-3 rounded-lg text-lg font-semibold">
                 View Services
             </a>
             <a href="#contact"
-               class="inline-block bg-transparent border-2 border-white hover:bg-white hover:text-blue-600 text-white px-8 py-3 rounded-lg text-lg font-semibold">
+                class="inline-block bg-transparent border-2 border-white hover:bg-white hover:text-blue-600 text-white px-8 py-3 rounded-lg text-lg font-semibold">
                 Get Started
             </a>
         </div>
@@ -49,8 +58,10 @@
                     <i class="ri-cloud-line text-2xl text-blue-600"></i>
                 </div>
                 <h3 class="text-2xl font-bold mb-2">Cloud & VM Services</h3>
-                <p class="text-gray-600 mb-4">Deploy secure, scalable virtual machines and web solutions with 99.99% uptime—perfect for startups, enterprises, and digital platforms.</p>
-                <a href="{{ route('services') }}" class="text-blue-600 font-semibold hover:text-blue-700">Learn More →</a>
+                <p class="text-gray-600 mb-4">Deploy secure, scalable virtual machines and web solutions with 99.99%
+                    uptime—perfect for startups, enterprises, and digital platforms.</p>
+                <a href="{{ route('services') }}" class="text-blue-600 font-semibold hover:text-blue-700">Learn More
+                    →</a>
             </div>
 
             <!-- Email & Hosting -->
@@ -59,8 +70,10 @@
                     <i class="ri-mail-line text-2xl text-green-600"></i>
                 </div>
                 <h3 class="text-2xl font-bold mb-2">Email & Hosting Solutions</h3>
-                <p class="text-gray-600 mb-4">Office 365, Google Workspace & Domain Solutions. Boost productivity and security with professional email and cloud collaboration tools.</p>
-                <a href="{{ route('services') }}" class="text-green-600 font-semibold hover:text-green-700">Learn More →</a>
+                <p class="text-gray-600 mb-4">Office 365, Google Workspace & Domain Solutions. Boost productivity and
+                    security with professional email and cloud collaboration tools.</p>
+                <a href="{{ route('services') }}" class="text-green-600 font-semibold hover:text-green-700">Learn More
+                    →</a>
             </div>
 
             <!-- AI Solutions -->
@@ -69,8 +82,10 @@
                     <i class="ri-cpu-line text-2xl text-purple-600"></i>
                 </div>
                 <h3 class="text-2xl font-bold mb-2">AI Software Solutions</h3>
-                <p class="text-gray-600 mb-4">Transform your business with intelligent automation, predictive analytics, and AI-driven applications tailored to your needs.</p>
-                <a href="{{ route('services') }}" class="text-purple-600 font-semibold hover:text-purple-700">Learn More →</a>
+                <p class="text-gray-600 mb-4">Transform your business with intelligent automation, predictive analytics,
+                    and AI-driven applications tailored to your needs.</p>
+                <a href="{{ route('services') }}" class="text-purple-600 font-semibold hover:text-purple-700">Learn More
+                    →</a>
             </div>
 
             <!-- Security Solutions -->
@@ -79,7 +94,8 @@
                     <i class="ri-shield-lock-line text-2xl text-red-600"></i>
                 </div>
                 <h3 class="text-2xl font-bold mb-2">AI-Powered Security</h3>
-                <p class="text-gray-600 mb-4">Enhance your defense with real-time threat detection, intelligent surveillance, and proactive security analytics powered by AI.</p>
+                <p class="text-gray-600 mb-4">Enhance your defense with real-time threat detection, intelligent
+                    surveillance, and proactive security analytics powered by AI.</p>
                 <a href="{{ route('services') }}" class="text-red-600 font-semibold hover:text-red-700">Learn More →</a>
             </div>
 
@@ -89,8 +105,10 @@
                     <i class="ri-camera-line text-2xl text-yellow-600"></i>
                 </div>
                 <h3 class="text-2xl font-bold mb-2">24/7 Surveillance</h3>
-                <p class="text-gray-600 mb-4">Protect your home and business with cutting-edge surveillance systems, real-time alerts, and remote access capabilities.</p>
-                <a href="{{ route('services') }}" class="text-yellow-600 font-semibold hover:text-yellow-700">Learn More →</a>
+                <p class="text-gray-600 mb-4">Protect your home and business with cutting-edge surveillance systems,
+                    real-time alerts, and remote access capabilities.</p>
+                <a href="{{ route('services') }}" class="text-yellow-600 font-semibold hover:text-yellow-700">Learn More
+                    →</a>
             </div>
 
             <!-- Network Services -->
@@ -99,8 +117,10 @@
                     <i class="ri-router-line text-2xl text-indigo-600"></i>
                 </div>
                 <h3 class="text-2xl font-bold mb-2">Managed Network Services</h3>
-                <p class="text-gray-600 mb-4">CP, VPN, APN, VAS & MFS Solutions. Secure, scalable, and customizable services for telecoms and enterprises.</p>
-                <a href="{{ route('services') }}" class="text-indigo-600 font-semibold hover:text-indigo-700">Learn More →</a>
+                <p class="text-gray-600 mb-4">CP, VPN, APN, VAS & MFS Solutions. Secure, scalable, and customizable
+                    services for telecoms and enterprises.</p>
+                <a href="{{ route('services') }}" class="text-indigo-600 font-semibold hover:text-indigo-700">Learn More
+                    →</a>
             </div>
         </div>
     </div>
@@ -172,7 +192,8 @@
     <div class="max-w-4xl mx-auto text-center">
         <h2 class="text-4xl md:text-5xl font-bold mb-6">Ready to Transform Your Business?</h2>
         <p class="text-xl mb-8">Get in touch with our team to discuss your IT needs and find the perfect solution.</p>
-        <a href="#" class="inline-block bg-white text-blue-600 hover:bg-gray-100 px-10 py-4 rounded-lg text-lg font-semibold">
+        <a href="#"
+            class="inline-block bg-white text-blue-600 hover:bg-gray-100 px-10 py-4 rounded-lg text-lg font-semibold">
             Contact Us Today
         </a>
     </div>
