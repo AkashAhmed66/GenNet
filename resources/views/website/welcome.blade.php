@@ -6,103 +6,166 @@
 <!-- Add Remix Icon CDN -->
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/remixicon@4.0.0/fonts/remixicon.css">
 
-<!-- HERO SECTION -->
-<section class="relative h-[80vh] bg-cover bg-center flex items-center justify-center"
-    style="background-image: url('{{ asset('images/Home_body.png') }}');">
+<!-- Swiper CSS -->
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
 
+<!-- Swiper JS -->
+<script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
+
+
+<!-- HERO SECTION -->
+
+<section class="relative h-[80vh] bg-cover bg-center flex items-center justify-center"
+    <!-- Swiper Container -->
+    <div class="swiper h-full w-full">
+        <div class="swiper-wrapper">
+            <!-- Slide 1 -->
+            <div class="swiper-slide bg-cover bg-center"
+                 style="background-image: url('{{ asset('images/gen1.jpeg') }}');">
+                <div class="absolute inset-0 bg-black bg-opacity-60"></div>
+                 <div class="absolute inset-0 flex items-center justify-center">
+                <div class="relative text-center max-w-3xl px-4 text-white">
+                    <h1 class="text-4xl md:text-6xl font-extrabold leading-tight animate__animated animate__fadeInUp animate__delay-0.5s">
+                        Next-Gen Cloud & AI Solutions
+                    </h1>
+                    <p class="mt-4 text-lg md:text-xl animate__animated animate__fadeInUp animate__delay-1s">Secure cloud infrastructure with 99.99% uptime.</p>
+                </div>
+                 </div>
+            </div>
+
+            <!-- Slide 2 -->
+            <div class="swiper-slide bg-cover bg-center"
+                 style="background-image: url('{{ asset('images/gen2.jpg') }}');">
+                <div class="absolute inset-0 bg-black bg-opacity-60"></div>
+                <div class="absolute inset-0 flex items-center justify-center">
+                <div class="relative text-center max-w-3xl px-4 text-white">
+                    <h1 class="text-4xl md:text-6xl font-extrabold leading-tight animate__animated animate__fadeInDown animate__delay-1s">
+                        AI-Driven Applications
+                    </h1>
+                    <p class="mt-4 text-lg md:text-xl animate__animated animate__fadeInUp animate__delay-2s">Transform your business with predictive analytics.</p>
+                </div>
+            </div>
+            </div>
+
+            <!-- Slide 3 -->
+            <div class="swiper-slide bg-cover bg-center"
+                 style="background-image: url('{{ asset('images/gen3.jpg') }}');">
+                <div class="absolute inset-0 bg-black bg-opacity-60"></div>
+                <div class="absolute inset-0 flex items-center justify-center">
+                <div class="relative text-center max-w-3xl px-4 text-white">
+                    <h1 class="text-4xl md:text-6xl font-extrabold leading-tight animate__animated animate__fadeInUp animate__delay-0.5s">
+                        AI-Powered Security
+                    </h1>
+                    <p class="mt-4 text-lg md:text-xl animate__animated animate__fadeInUp animate__delay-1s">Real-time threat detection & surveillance.</p>
+                </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Pagination & Navigation -->
+        <div class="swiper-pagination"></div>
+        <div class="swiper-button-prev"></div>
+        <div class="swiper-button-next"></div>
+    </div>
     <div class="absolute inset-0 bg-black bg-opacity-60"></div>
 
-    <div class="relative text-center max-w-3xl px-4 text-white">
-        <h1 class="text-4xl md:text-6xl font-extrabold leading-tight">
-            Next-Gen Cloud & AI Solutions for Your Business
-        </h1>
-
-        <p class="mt-4 text-lg md:text-xl">
-            Empower your enterprise with secure cloud infrastructure, AI-driven applications, and advanced security solutions. Deploy with 99.99% uptime guaranteed.
-        </p>
-
-        <div class="mt-8 flex flex-col md:flex-row gap-4 justify-center">
-            <a href="{{ route('services') }}"
-               class="inline-block bg-blue-600 hover:bg-blue-700 text-white px-8 py-3 rounded-lg text-lg font-semibold">
-                View Services
-            </a>
-            <a href="#contact"
-               class="inline-block bg-transparent border-2 border-white hover:bg-white hover:text-blue-600 text-white px-8 py-3 rounded-lg text-lg font-semibold">
-                Get Started
-            </a>
-        </div>
-    </div>
 </section>
 
 <!-- SERVICES OVERVIEW SECTION -->
 <section class="py-20 px-4 bg-gray-50">
-    <div class="max-w-7xl mx-auto">
-        <div class="text-center mb-16">
-            <h2 class="text-4xl md:text-5xl font-bold mb-4">Our Core Services</h2>
-            <p class="text-xl text-gray-600">Comprehensive IT Solutions Tailored to Your Business Needs</p>
+    <div class="max-w-6xl mx-auto px-4 py-16">
+        <div class="max-w-4xl mx-auto text-center mb-16">
+            <h2 class="text-4xl md:text-5xl font-bold mb-4">Discover what we offer</h2>
+            <p class="text-lg md:text-xl text-gray-600">Comprehensive IT Solutions Tailored to Your Business Needs.
+                 Whether you’re modernizing your workflows, creating powerful digital platforms, or designing solutions to connect with your audience, we’re here to help you succeed.</p>
         </div>
 
         <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             <!-- Cloud Solutions -->
-            <div class="bg-white p-8 rounded-lg shadow-lg hover:shadow-xl transition">
-                <div class="w-16 h-16 bg-blue-100 rounded-full flex items-center justify-center mb-4">
-                    <i class="ri-cloud-line text-2xl text-blue-600"></i>
+            <div class="bg-white aspect-square p-5 rounded-lg shadow-lg hover:shadow-xl transition group hover:bg-blue-500 flex flex-col items-center justify-center text-center">
+                <div class="w-12 h-12 bg-blue-100 rounded-full flex items-center justify-center mb-4">
+                    <i class="ri-cloud-line text-xl text-blue-600 group-hover:text-white"></i>
                 </div>
-                <h3 class="text-2xl font-bold mb-2">Cloud & VM Services</h3>
-                <p class="text-gray-600 mb-4">Deploy secure, scalable virtual machines and web solutions with 99.99% uptime—perfect for startups, enterprises, and digital platforms.</p>
-                <a href="{{ route('services') }}" class="text-blue-600 font-semibold hover:text-blue-700">Learn More →</a>
+                <h3 class="text-xl font-bold mb-2 group-hover:text-white">Cloud & VM Services</h3>
+                <a href="{{ route('services') }}" class="text-blue-600 font-semibold group-hover:text-white">Learn More →</a>
             </div>
 
             <!-- Email & Hosting -->
-            <div class="bg-white p-8 rounded-lg shadow-lg hover:shadow-xl transition">
-                <div class="w-16 h-16 bg-green-100 rounded-full flex items-center justify-center mb-4">
-                    <i class="ri-mail-line text-2xl text-green-600"></i>
+            <div class="bg-white aspect-square p-6 rounded-lg shadow-lg hover:shadow-xl transition  group hover:bg-blue-500 flex flex-col items-center justify-center text-center">
+                <div class="w-12 h-12 bg-green-100 rounded-full flex items-center justify-center mb-4">
+                    <i class="ri-mail-line text-xl text-green-600 group-hover:text-white"></i>
                 </div>
-                <h3 class="text-2xl font-bold mb-2">Email & Hosting Solutions</h3>
-                <p class="text-gray-600 mb-4">Office 365, Google Workspace & Domain Solutions. Boost productivity and security with professional email and cloud collaboration tools.</p>
-                <a href="{{ route('services') }}" class="text-green-600 font-semibold hover:text-green-700">Learn More →</a>
+                <h3 class="text-xl font-bold mb-2 group-hover:text-white">Email & Hosting Solutions</h3>
+                <a href="{{ route('services') }}" class="text-green-600 font-semibold group-hover:text-white">Learn More →</a>
             </div>
 
             <!-- AI Solutions -->
-            <div class="bg-white p-8 rounded-lg shadow-lg hover:shadow-xl transition">
-                <div class="w-16 h-16 bg-purple-100 rounded-full flex items-center justify-center mb-4">
-                    <i class="ri-cpu-line text-2xl text-purple-600"></i>
+            <div class="bg-white aspect-square p-6 rounded-lg shadow-lg hover:shadow-xl transition  group hover:bg-blue-500 flex flex-col items-center justify-center text-center">
+                <div class="w-12 h-12 bg-purple-100 rounded-full flex items-center justify-center mb-4">
+                    <i class="ri-cpu-line text-xl text-purple-600 group-hover:text-white"></i>
                 </div>
-                <h3 class="text-2xl font-bold mb-2">AI Software Solutions</h3>
-                <p class="text-gray-600 mb-4">Transform your business with intelligent automation, predictive analytics, and AI-driven applications tailored to your needs.</p>
-                <a href="{{ route('services') }}" class="text-purple-600 font-semibold hover:text-purple-700">Learn More →</a>
+                <h3 class="text-xl font-bold mb-2 group-hover:text-white">AI Software Solutions</h3>
+                <a href="{{ route('services') }}" class="text-purple-600 font-semibold group-hover:text-white">Learn More →</a>
             </div>
 
             <!-- Security Solutions -->
-            <div class="bg-white p-8 rounded-lg shadow-lg hover:shadow-xl transition">
-                <div class="w-16 h-16 bg-red-100 rounded-full flex items-center justify-center mb-4">
-                    <i class="ri-shield-lock-line text-2xl text-red-600"></i>
+            <div class="bg-white aspect-square p-6 rounded-lg shadow-lg hover:shadow-xl transition  group   hover:bg-blue-500 flex flex-col items-center justify-center text-center">
+                <div class="w-12 h-12 bg-red-100 rounded-full flex items-center justify-center mb-4">
+                    <i class="ri-shield-lock-line text-xl text-red-600 group-hover:text-white"></i>
                 </div>
-                <h3 class="text-2xl font-bold mb-2">AI-Powered Security</h3>
-                <p class="text-gray-600 mb-4">Enhance your defense with real-time threat detection, intelligent surveillance, and proactive security analytics powered by AI.</p>
-                <a href="{{ route('services') }}" class="text-red-600 font-semibold hover:text-red-700">Learn More →</a>
+                <h3 class="text-xl font-bold mb-2 group-hover:text-white">AI-Powered Security</h3>
+                <a href="{{ route('services') }}" class="text-red-600 font-semibold group-hover:text-white">Learn More →</a>
             </div>
 
             <!-- Surveillance -->
-            <div class="bg-white p-8 rounded-lg shadow-lg hover:shadow-xl transition">
-                <div class="w-16 h-16 bg-yellow-100 rounded-full flex items-center justify-center mb-4">
-                    <i class="ri-camera-line text-2xl text-yellow-600"></i>
+            <div class="bg-white aspect-square p-6 rounded-lg shadow-lg hover:shadow-xl transition  group hover:bg-blue-500 flex flex-col items-center justify-center text-center">
+                <div class="w-12 h-12 bg-yellow-100 rounded-full flex items-center justify-center mb-4">
+                    <i class="ri-camera-line text-xl text-yellow-600 group-hover:text-white"></i>
                 </div>
-                <h3 class="text-2xl font-bold mb-2">24/7 Surveillance</h3>
-                <p class="text-gray-600 mb-4">Protect your home and business with cutting-edge surveillance systems, real-time alerts, and remote access capabilities.</p>
-                <a href="{{ route('services') }}" class="text-yellow-600 font-semibold hover:text-yellow-700">Learn More →</a>
+                <h3 class="text-xl font-bold mb-2 group-hover:text-white">24/7 Surveillance</h3>
+                <a href="{{ route('services') }}" class="text-yellow-600 font-semibold group-hover:text-white">Learn More →</a>
             </div>
 
             <!-- Network Services -->
-            <div class="bg-white p-8 rounded-lg shadow-lg hover:shadow-xl transition">
-                <div class="w-16 h-16 bg-indigo-100 rounded-full flex items-center justify-center mb-4">
-                    <i class="ri-router-line text-2xl text-indigo-600"></i>
+            <div class="bg-white aspect-square p-6 rounded-lg shadow-lg hover:shadow-xl transition  group hover:bg-blue-500 flex flex-col items-center justify-center text-center">
+                <div class="w-12 h-12 bg-indigo-100 rounded-full flex items-center justify-center mb-4">
+                    <i class="ri-router-line text-xl text-indigo-600 group-hover:text-white"></i>
                 </div>
-                <h3 class="text-2xl font-bold mb-2">Managed Network Services</h3>
-                <p class="text-gray-600 mb-4">CP, VPN, APN, VAS & MFS Solutions. Secure, scalable, and customizable services for telecoms and enterprises.</p>
-                <a href="{{ route('services') }}" class="text-indigo-600 font-semibold hover:text-indigo-700">Learn More →</a>
+                <h3 class="text-xl font-bold mb-2 group-hover:text-white">Managed Network Services</h3>
+                <a href="{{ route('services') }}" class="text-indigo-600 font-semibold group-hover:text-white">Learn More →</a>
             </div>
+
+            <!-- SMS Services -->
+            <div class="bg-white aspect-square p-6 rounded-lg shadow-lg hover:shadow-xl transition  group hover:bg-blue-500 flex flex-col items-center justify-center text-center">
+                <div class="w-12 h-12 bg-indigo-100 rounded-full flex items-center justify-center mb-4">
+                     <i class="ri-chat-3-line text-xl text-indigo-600 group-hover:text-white"></i>
+                </div>
+                <h3 class="text-xl font-bold mb-2 group-hover:text-white"> SMS Services</h3>
+                <a href="{{ route('services') }}" class="text-indigo-600 font-semibold group-hover:text-white">Learn More →</a>
+            </div>
+
+            <!-- Microsoft Services -->
+            <div class="bg-white aspect-square p-6 rounded-lg shadow-lg hover:shadow-xl transition  group hover:bg-blue-500 flex flex-col items-center justify-center text-center">
+                <div class="w-12 h-12 bg-indigo-100 rounded-full flex items-center justify-center mb-4">
+                    <i class="ri-windows-line text-xl text-blue-600 group-hover:text-white"></i>
+                </div>
+                <h3 class="text-xl font-bold mb-2 group-hover:text-white">Microsoft Services</h3>
+                <a href="{{ route('services') }}" class="text-indigo-600 font-semibold group-hover:text-white">Learn More →</a>
+            </div>
+
+            <!-- call  Services -->
+            <div class="bg-white aspect-square p-6 rounded-lg shadow-lg hover:shadow-xl transition  group hover:bg-blue-500 flex flex-col items-center justify-center text-center">
+                <div class="w-12 h-12 bg-indigo-100 rounded-full flex items-center justify-center mb-4">
+                    <i class="ri-phone-line text-xl text-indigo-600 group-hover:text-white"></i>
+                </div>
+                <h3 class="text-xl font-bold mb-2 group-hover:text-white">Customized Call Center Services</h3>
+                <a href="{{ route('services') }}" class="text-indigo-600 font-semibold group-hover:text-white">Learn More →</a>
+            </div>
+
         </div>
+
     </div>
 </section>
 
@@ -172,9 +235,29 @@
     <div class="max-w-4xl mx-auto text-center">
         <h2 class="text-4xl md:text-5xl font-bold mb-6">Ready to Transform Your Business?</h2>
         <p class="text-xl mb-8">Get in touch with our team to discuss your IT needs and find the perfect solution.</p>
-        <a href="#" class="inline-block bg-white text-blue-600 hover:bg-gray-100 px-10 py-4 rounded-lg text-lg font-semibold">
+        <a href="#"
+            class="inline-block bg-white text-blue-600 hover:bg-gray-100 px-10 py-4 rounded-lg text-lg font-semibold">
             Contact Us Today
         </a>
     </div>
 </section>
+<script>
+  const swiper = new Swiper('.swiper', {
+    loop: true,
+    autoplay: {
+      delay: 3000,
+      disableOnInteraction: false,
+    },
+    pagination: {
+      el: '.swiper-pagination',
+      clickable: true,
+    },
+    navigation: {
+      nextEl: '.swiper-button-next',
+      prevEl: '.swiper-button-prev',
+    },
+    effect: 'fade', // smooth fade transition
+  });
+</script>
+
 @endsection
