@@ -149,7 +149,7 @@
 </section>
 
 <!-- CTA SECTION -->
-<section class="py-20 px-4 bg-blue-600 text-white">
+<section class="py-20 px-4 bg-indigo-900 text-white">
     <div class="max-w-4xl mx-auto text-center">
         <h2 class="text-4xl md:text-5xl font-bold mb-6">Ready to Get Started?</h2>
         <p class="text-xl mb-8">Contact our team to discuss which services are right for your organization.</p>

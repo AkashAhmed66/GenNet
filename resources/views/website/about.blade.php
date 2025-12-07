@@ -3,187 +3,186 @@
 @section('title', 'About Us - GenNet Solutions')
 
 @section('content')
+
 <!-- HERO SECTION -->
-<section class="relative h-[60vh] bg-cover bg-center flex items-center justify-center"
-    style="background-image: url('https://images.unsplash.com/photo-1552664730-d307ca884978');">
+<section class="relative h-[70vh] bg-cover bg-center flex items-center justify-center overflow-hidden"
+    style="background-image: url('https://images.unsplash.com/photo-1535223289827-42f1e9919769');">
 
-    <div class="absolute inset-0 bg-black bg-opacity-50"></div>
+    <div class="absolute inset-0 bg-black bg-opacity-60"></div>
 
-    <div class="relative text-center max-w-3xl px-4 text-white">
-        <h1 class="text-4xl md:text-6xl font-extrabold leading-tight">
+    <div id="heroText"
+         class="relative text-center max-w-3xl px-4 text-white opacity-0 translate-y-10 transition-all duration-[1200ms] ease-out">
+
+        <h1 class="text-5xl md:text-6xl font-extrabold leading-tight drop-shadow-lg">
             About GenNet
         </h1>
 
-        <p class="mt-4 text-lg md:text-xl">
-            Your Trusted Partner in Digital Transformation
+        <p class="mt-4 text-xl md:text-2xl opacity-90">
+            Transforming Businesses with Enterprise IT Solutions
         </p>
+
     </div>
 </section>
 
+<script>
+    // Smooth animation on page load
+    window.addEventListener('load', () => {
+        const hero = document.getElementById('heroText');
+        setTimeout(() => {
+            hero.classList.remove('opacity-0', 'translate-y-10');
+            hero.classList.add('opacity-100', 'translate-y-0');
+        }, 200);
+    });
+</script>
+
+
 <!-- ABOUT CONTENT -->
-<section class="py-20 px-4">
+<section class="py-20 px-4 bg-white">
+    <div class="max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
+
+        <div>
+            <h2 class="text-4xl font-bold mb-6 text-gray-900 leading-tight">
+                Driving Innovation. Delivering Technology.
+            </h2>
+
+            <p class="text-gray-700 text-lg leading-relaxed mb-6">
+                GenNet is a trusted IT service provider specializing in enterprise technology, cloud infrastructure,
+                AI-driven automation, cybersecurity, and digital transformation.
+            </p>
+
+            <p class="text-gray-700 text-lg leading-relaxed mb-6">
+                For years, we have been empowering organizations across Bangladesh and beyond with modern, secure,
+                scalable and business-ready technology solutions.
+            </p>
+
+            <p class="text-gray-700 text-lg leading-relaxed">
+                Our expert engineers, creative teams, and technical consultants work together to build future-ready systems
+                that elevate businesses to the next level.
+            </p>
+        </div>
+
+        <div>
+            <img src="https://images.unsplash.com/photo-1552664688-cf412ec27db2"
+                class="rounded-lg shadow-2xl" alt="">
+        </div>
+    </div>
+</section>
+
+<!-- COMPANY STATS -->
+<section class="py-20 bg-gray-50">
+    <div class="max-w-6xl mx-auto px-4">
+        <div class="grid grid-cols-1 md:grid-cols-4 gap-10 text-center">
+
+            <div>
+                <h3 class="text-5xl font-extrabold text-blue-600">10+</h3>
+                <p class="mt-2 text-lg text-gray-600">Years of Experience</p>
+            </div>
+
+            <div>
+                <h3 class="text-5xl font-extrabold text-blue-600">100+</h3>
+                <p class="mt-2 text-lg text-gray-600">Corporate Clients</p>
+            </div>
+
+            <div>
+                <h3 class="text-5xl font-extrabold text-blue-600">50+</h3>
+                <p class="mt-2 text-lg text-gray-600">Large Projects Delivered</p>
+            </div>
+
+            <div>
+                <h3 class="text-5xl font-extrabold text-blue-600">24/7</h3>
+                <p class="mt-2 text-lg text-gray-600">Support Availability</p>
+            </div>
+
+        </div>
+    </div>
+</section>
+
+<!-- MISSION & VISION -->
+<section class="py-20 px-4 bg-white">
+    <div class="max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-12">
+
+        <div class="bg-blue-50 p-10 rounded-2xl shadow">
+            <h3 class="text-3xl font-bold mb-4 text-blue-700">Our Mission</h3>
+            <p class="text-gray-700 text-lg leading-relaxed">
+                To empower organizations through advanced, secure, and scalable IT solutions that accelerate
+                business growth and support digital innovation.
+            </p>
+        </div>
+
+        <div class="bg-green-50 p-10 rounded-2xl shadow">
+            <h3 class="text-3xl font-bold mb-4 text-green-700">Our Vision</h3>
+            <p class="text-gray-700 text-lg leading-relaxed">
+                To become the most trusted and innovative IT solutions provider in South Asia, offering world-class
+                digital transformation services.
+            </p>
+        </div>
+
+    </div>
+</section>
+
+<!-- LEADERSHIP TEAM -->
+<section class="py-20 bg-gray-50 px-4">
     <div class="max-w-6xl mx-auto">
-        <div class="grid grid-cols-1 md:grid-cols-2 gap-12 items-center mb-20">
-            <div>
-                <img src="https://images.unsplash.com/photo-1552664730-d307ca884978" alt="About GenNet" class="rounded-lg shadow-lg">
+        <h2 class="text-4xl font-bold text-center mb-16">Leadership Team</h2>
+
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-12">
+
+            <div class="text-center">
+                <img src="https://randomuser.me/api/portraits/men/32.jpg"
+                    class="w-40 h-40 rounded-full mx-auto shadow-lg mb-4 object-cover">
+                <h4 class="text-xl font-bold">Ahsan Rahman</h4>
+                <p class="text-blue-600 font-semibold">Chief Executive Officer</p>
             </div>
 
-            <div>
-                <h2 class="text-4xl font-bold mb-6">Who We Are</h2>
-
-                <p class="text-lg text-gray-700 mb-4">
-                    GenNet is a leading provider of comprehensive IT solutions, serving businesses across multiple industries in Bangladesh and beyond. With years of expertise in cloud computing, AI, security, and networking, we've built a reputation for delivering innovative solutions that transform businesses.
-                </p>
-
-                <p class="text-lg text-gray-700 mb-4">
-                    Our team of experienced professionals is committed to understanding your unique business challenges and providing tailored solutions that drive growth, efficiency, and security.
-                </p>
-
-                <p class="text-lg text-gray-700">
-                    We believe technology should empower businesses, not complicate them. That's why we focus on delivering solutions that are reliable, scalable, and user-friendly.
-                </p>
+            <div class="text-center">
+                <img src="https://randomuser.me/api/portraits/men/52.jpg"
+                    class="w-40 h-40 rounded-full mx-auto shadow-lg mb-4 object-cover">
+                <h4 class="text-xl font-bold">Mahmud Khan</h4>
+                <p class="text-blue-600 font-semibold">Chief Technology Officer</p>
             </div>
+
+            <div class="text-center">
+                <img src="https://randomuser.me/api/portraits/women/41.jpg"
+                    class="w-40 h-40 rounded-full mx-auto shadow-lg mb-4 object-cover">
+                <h4 class="text-xl font-bold">Sara Ahmed</h4>
+                <p class="text-blue-600 font-semibold">Head of Operations</p>
+            </div>
+
         </div>
+    </div>
+</section>
 
-        <!-- MISSION & VISION -->
-        <div class="grid grid-cols-1 md:grid-cols-2 gap-12 mb-20">
-            <div class="bg-blue-50 p-8 rounded-lg">
-                <h3 class="text-3xl font-bold mb-4 text-blue-600">Our Mission</h3>
+<!-- PARTNERS SECTION -->
+<section class="py-20 bg-white px-4">
+    <div class="max-w-6xl mx-auto">
+        <h2 class="text-4xl font-bold text-center mb-16">Our Partners</h2>
 
-                <p class="text-gray-700 text-lg">
-                    To provide innovative, reliable, and cost-effective IT solutions that empower businesses to achieve their digital transformation goals and compete effectively in the global marketplace.
-                </p>
-            </div>
+        <div class="grid grid-cols-2 md:grid-cols-4 gap-10 items-center">
 
-            <div class="bg-green-50 p-8 rounded-lg">
-                <h3 class="text-3xl font-bold mb-4 text-green-600">Our Vision</h3>
+            <img src="https://upload.wikimedia.org/wikipedia/commons/a/ab/Microsoft_logo.png"
+                class="h-12 grayscale hover:grayscale-0 transition mx-auto">
 
-                <p class="text-gray-700 text-lg">
-                    To be the leading IT solutions provider in South Asia, recognized for excellence, innovation, and customer satisfaction. We envision a future where every business has access to world-class technology solutions.
-                </p>
-            </div>
-        </div>
+            <img src="https://upload.wikimedia.org/wikipedia/commons/4/4e/Google_2015_logo.svg"
+                class="h-12 grayscale hover:grayscale-0 transition mx-auto">
 
-        <!-- CORE VALUES -->
-        <div class="mb-20">
-            <h2 class="text-4xl font-bold mb-12 text-center">Our Core Values</h2>
+            <img src="https://upload.wikimedia.org/wikipedia/commons/8/87/Oracle_logo.svg"
+                class="h-12 grayscale hover:grayscale-0 transition mx-auto">
 
-            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-                <div class="text-center p-6 bg-white rounded-lg shadow-lg hover:shadow-xl transition">
-                    <i class="ri-target-line text-5xl text-blue-600 mb-4 block"></i>
-                    <h4 class="text-xl font-bold mb-2">Excellence</h4>
-                    <p class="text-gray-600">We strive for excellence in everything we do, from customer service to technology implementation.</p>
-                </div>
+            <img src="https://upload.wikimedia.org/wikipedia/commons/3/31/IBM_logo.svg"
+                class="h-12 grayscale hover:grayscale-0 transition mx-auto">
 
-                <div class="text-center p-6 bg-white rounded-lg shadow-lg hover:shadow-xl transition">
-                    <i class="ri-lightbulb-line text-5xl text-yellow-600 mb-4 block"></i>
-                    <h4 class="text-xl font-bold mb-2">Innovation</h4>
-                    <p class="text-gray-600">We embrace new technologies and creative solutions to solve complex business challenges.</p>
-                </div>
-
-                <div class="text-center p-6 bg-white rounded-lg shadow-lg hover:shadow-xl transition">
-                    <i class="ri-handshake-line text-5xl text-green-600 mb-4 block"></i>
-                    <h4 class="text-xl font-bold mb-2">Partnership</h4>
-                    <p class="text-gray-600">We believe in building long-term partnerships with our clients, working as an extension of their team.</p>
-                </div>
-
-                <div class="text-center p-6 bg-white rounded-lg shadow-lg hover:shadow-xl transition">
-                    <i class="ri-shield-keyhole-line text-5xl text-red-600 mb-4 block"></i>
-                    <h4 class="text-xl font-bold mb-2">Security</h4>
-                    <p class="text-gray-600">Data security and privacy are paramount. We implement industry-leading security standards.</p>
-                </div>
-            </div>
-        </div>
-
-        <!-- WHY CHOOSE US -->
-        <div class="bg-gray-50 p-12 rounded-lg">
-            <h2 class="text-4xl font-bold mb-12 text-center">Why Choose GenNet?</h2>
-
-            <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
-                <div class="flex gap-4">
-                    <div class="flex-shrink-0">
-                        <div class="flex items-center justify-center h-12 w-12 rounded-md bg-blue-600 text-white">
-                            ✓
-                        </div>
-                    </div>
-                    <div>
-                        <h3 class="text-xl font-bold mb-2">Proven Expertise</h3>
-                        <p class="text-gray-700">Years of experience delivering solutions to businesses across diverse industries.</p>
-                    </div>
-                </div>
-
-                <div class="flex gap-4">
-                    <div class="flex-shrink-0">
-                        <div class="flex items-center justify-center h-12 w-12 rounded-md bg-blue-600 text-white">
-                            ✓
-                        </div>
-                    </div>
-                    <div>
-                        <h3 class="text-xl font-bold mb-2">24/7 Support</h3>
-                        <p class="text-gray-700">Our dedicated support team is available round-the-clock to assist you.</p>
-                    </div>
-                </div>
-
-                <div class="flex gap-4">
-                    <div class="flex-shrink-0">
-                        <div class="flex items-center justify-center h-12 w-12 rounded-md bg-blue-600 text-white">
-                            ✓
-                        </div>
-                    </div>
-                    <div>
-                        <h3 class="text-xl font-bold mb-2">Customized Solutions</h3>
-                        <p class="text-gray-700">We tailor every solution to meet your specific business requirements.</p>
-                    </div>
-                </div>
-
-                <div class="flex gap-4">
-                    <div class="flex-shrink-0">
-                        <div class="flex items-center justify-center h-12 w-12 rounded-md bg-blue-600 text-white">
-                            ✓
-                        </div>
-                    </div>
-                    <div>
-                        <h3 class="text-xl font-bold mb-2">Latest Technology</h3>
-                        <p class="text-gray-700">We use cutting-edge technology and industry best practices.</p>
-                    </div>
-                </div>
-
-                <div class="flex gap-4">
-                    <div class="flex-shrink-0">
-                        <div class="flex items-center justify-center h-12 w-12 rounded-md bg-blue-600 text-white">
-                            ✓
-                        </div>
-                    </div>
-                    <div>
-                        <h3 class="text-xl font-bold mb-2">Competitive Pricing</h3>
-                        <p class="text-gray-700">Quality solutions at competitive rates without compromising on service.</p>
-                    </div>
-                </div>
-
-                <div class="flex gap-4">
-                    <div class="flex-shrink-0">
-                        <div class="flex items-center justify-center h-12 w-12 rounded-md bg-blue-600 text-white">
-                            ✓
-                        </div>
-                    </div>
-                    <div>
-                        <h3 class="text-xl font-bold mb-2">Proven Track Record</h3>
-                        <p class="text-gray-700">Trusted by leading companies and organizations nationwide.</p>
-                    </div>
-                </div>
-            </div>
         </div>
     </div>
 </section>
 
 <!-- CTA SECTION -->
-<section class="py-20 px-4 bg-blue-600 text-white">
-    <div class="max-w-4xl mx-auto text-center">
-        <h2 class="text-4xl md:text-5xl font-bold mb-6">Let's Partner Together</h2>
-        <p class="text-xl mb-8">Get in touch with our team to learn how we can help transform your business.</p>
-        <a href="#" class="inline-block bg-white text-blue-600 hover:bg-gray-100 px-10 py-4 rounded-lg text-lg font-semibold">
-            Contact Us
-        </a>
-    </div>
+<section class="py-20 px-4 bg-blue-600 text-white text-center">
+    <h2 class="text-4xl md:text-5xl font-bold mb-6">Let’s Build Your Digital Future</h2>
+    <p class="text-xl mb-8">Talk to our team today about your project or IT needs.</p>
+
+    <a href="#" class="bg-white text-blue-600 px-10 py-4 rounded-lg text-lg font-semibold hover:bg-gray-100 transition">
+        Contact Us
+    </a>
 </section>
+
 @endsection
