@@ -104,7 +104,7 @@
             <!-- AI Solutions -->
             <div class="bg-white aspect-square p-6 rounded-lg shadow-lg hover:shadow-xl transition  group hover:bg-blue-500 flex flex-col items-center justify-center text-center">
                 <div class="w-12 h-12 bg-purple-100 rounded-full flex items-center justify-center mb-4">
-                    <i class="ri-cpu-line text-xl text-purple-600 group-hover:text-white"></i>
+                    <i class="ri-brain-line text-xl text-purple-600 group-hover:text-white"></i>
                 </div>
                 <h3 class="text-xl font-bold mb-2 group-hover:text-white">AI Software Solutions</h3>
                 <a href="{{ route('services') }}" class="text-purple-600 font-semibold group-hover:text-white">Learn More →</a>
@@ -113,7 +113,7 @@
             <!-- Security Solutions -->
             <div class="bg-white aspect-square p-6 rounded-lg shadow-lg hover:shadow-xl transition  group   hover:bg-blue-500 flex flex-col items-center justify-center text-center">
                 <div class="w-12 h-12 bg-red-100 rounded-full flex items-center justify-center mb-4">
-                    <i class="ri-shield-lock-line text-xl text-red-600 group-hover:text-white"></i>
+                    <i class="ri-robot-line text-xl text-purple-600 group-hover:text-white"></i>
                 </div>
                 <h3 class="text-xl font-bold mb-2 group-hover:text-white">AI-Powered Security</h3>
                 <a href="{{ route('services') }}" class="text-red-600 font-semibold group-hover:text-white">Learn More →</a>
