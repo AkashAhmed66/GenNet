@@ -29,7 +29,7 @@
             <div class="grid grid-cols-1 md:grid-cols-3 gap-4 mb-4">
                 <!-- Search -->
                 <div class="relative">
-                    <input type="text" placeholder="Search jobs..." 
+                    <input id="jobSearch" type="text" placeholder="Search jobs..." 
                         class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-600">
                     <i class="ri-search-line absolute right-3 top-3 text-gray-400"></i>
                 </div>
@@ -63,7 +63,7 @@
         <!-- Job Listings -->
         <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
             <!-- Position 1 -->
-            <div class="bg-gradient-to-r from-gray-400 to-white p-6 rounded border border-gray-300 hover:shadow-lg transition cursor-pointer group">
+            <div class="job-card bg-gradient-to-r from-gray-400 to-white p-6 rounded border border-gray-300 hover:shadow-lg transition cursor-pointer group">
                 <h3 class="text-xl font-bold mb-4 group-hover:text-gray-800 transition text-gray-900">Assistant Manager, Corporate Sales, Business Development</h3>
                 <div class="space-y-2 text-gray-700">
                     <p>Full Time</p>
@@ -75,7 +75,7 @@
             </div>
 
             <!-- Position 2 -->
-            <div class="bg-gradient-to-r from-gray-400 to-white p-6 rounded border border-gray-300 hover:shadow-lg transition cursor-pointer group">
+            <div class="job-card bg-gradient-to-r from-gray-400 to-white p-6 rounded border border-gray-300 hover:shadow-lg transition cursor-pointer group">
                 <h3 class="text-xl font-bold mb-4 group-hover:text-gray-800 transition text-gray-900">Senior Executive, Corporate Sales, Business Development</h3>
                 <div class="space-y-2 text-gray-700">
                     <p>Full Time</p>
@@ -87,7 +87,7 @@
             </div>
 
             <!-- Position 3 -->
-            <div class="bg-gradient-to-r from-gray-400 to-white p-6 rounded border border-gray-300 hover:shadow-lg transition cursor-pointer group">
+            <div class="job-card bg-gradient-to-r from-gray-400 to-white p-6 rounded border border-gray-300 hover:shadow-lg transition cursor-pointer group">
                 <h3 class="text-xl font-bold mb-4 group-hover:text-gray-800 transition text-gray-900">Sr. Executive/Ast, Manager – Merchant Acquisition Specialist (MAS)</h3>
                 <div class="space-y-2 text-gray-700">
                     <p>Full Time</p>
@@ -99,7 +99,7 @@
             </div>
 
             <!-- Position 4 -->
-            <div class="bg-gradient-to-r from-gray-400 to-white p-6 rounded border border-gray-300 hover:shadow-lg transition cursor-pointer group">
+            <div class="job-card bg-gradient-to-r from-gray-400 to-white p-6 rounded border border-gray-300 hover:shadow-lg transition cursor-pointer group">
                 <h3 class="text-xl font-bold mb-4 group-hover:text-gray-800 transition text-gray-900">Senior Executive /Assistant Manager, ICT Sales</h3>
                 <div class="space-y-2 text-gray-700">
                     <p>Full Time</p>
@@ -111,7 +111,7 @@
             </div>
 
             <!-- Position 5 -->
-            <div class="bg-gradient-to-r from-gray-400 to-white p-6 rounded border border-gray-300 hover:shadow-lg transition cursor-pointer group">
+            <div class="job-card bg-gradient-to-r from-gray-400 to-white p-6 rounded border border-gray-300 hover:shadow-lg transition cursor-pointer group">
                 <h3 class="text-xl font-bold mb-4 group-hover:text-gray-800 transition text-gray-900">Business Analyst</h3>
                 <div class="space-y-2 text-gray-700">
                     <p>Full Time</p>
@@ -123,7 +123,7 @@
             </div>
 
             <!-- Position 6 -->
-            <div class="bg-gradient-to-r from-gray-400 to-white p-6 rounded border border-gray-300 hover:shadow-lg transition cursor-pointer group">
+            <div class="job-card bg-gradient-to-r from-gray-400 to-white p-6 rounded border border-gray-300 hover:shadow-lg transition cursor-pointer group">
                 <h3 class="text-xl font-bold mb-4 group-hover:text-gray-800 transition text-gray-900">Executive/Sr. Executive, Sales – BFSI</h3>
                 <div class="space-y-2 text-gray-700">
                     <p>Full Time</p>
@@ -135,7 +135,7 @@
             </div>
 
             <!-- Position 7 -->
-            <div class="bg-gradient-to-r from-gray-400 to-white p-6 rounded border border-gray-300 hover:shadow-lg transition cursor-pointer group">
+            <div class="job-card bg-gradient-to-r from-gray-400 to-white p-6 rounded border border-gray-300 hover:shadow-lg transition cursor-pointer group">
                 <h3 class="text-xl font-bold mb-4 group-hover:text-gray-800 transition text-gray-900">Machine Learning Engineer</h3>
                 <div class="space-y-2 text-gray-700">
                     <p>Full Time</p>
@@ -147,7 +147,7 @@
             </div>
 
             <!-- Position 8 -->
-            <div class="bg-gradient-to-r from-gray-400 to-white p-6 rounded border border-gray-300 hover:shadow-lg transition cursor-pointer group">
+            <div class="job-card bg-gradient-to-r from-gray-400 to-white p-6 rounded border border-gray-300 hover:shadow-lg transition cursor-pointer group">
                 <h3 class="text-xl font-bold mb-4 group-hover:text-gray-800 transition text-gray-900">Cybersecurity Analyst</h3>
                 <div class="space-y-2 text-gray-700">
                     <p>Full Time</p>
@@ -159,7 +159,7 @@
             </div>
 
             <!-- Position 9 -->
-            <div class="bg-gradient-to-r from-gray-400 to-white p-6 rounded border border-gray-300 hover:shadow-lg transition cursor-pointer group">
+            <div class="job-card bg-gradient-to-r from-gray-400 to-white p-6 rounded border border-gray-300 hover:shadow-lg transition cursor-pointer group">
                 <h3 class="text-xl font-bold mb-4 group-hover:text-gray-800 transition text-gray-900">Assistant Manager/Deputy Manager/Manager, Software Sales, Enterprise Solution—Business Development</h3>
                 <div class="space-y-2 text-gray-700">
                     <p>Full Time</p>
@@ -202,7 +202,22 @@
     </div>
 </section>
 
+<!-- SEARCH SCRIPT -->
+<script>
+document.getElementById("jobSearch").addEventListener("keyup", function () {
+    const searchText = this.value.toLowerCase();
+    const jobCards = document.querySelectorAll(".job-card");
 
-    </div>
-</section>
+    jobCards.forEach(card => {
+        const title = card.querySelector("h3").textContent.toLowerCase();
+
+        if (title.includes(searchText)) {
+            card.style.display = "block";
+        } else {
+            card.style.display = "none";
+        }
+    });
+});
+</script>
+
 @endsection
