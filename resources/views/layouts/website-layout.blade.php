@@ -35,23 +35,44 @@
 
             </a>
 
-            <!-- Desktop Menu -->
-            <nav class="hidden md:flex space-x-8 text-[17px] font-medium">
-                <a href="{{ route('home') }}"
-                    class="hover:text-blue-600 transition duration-300">Home</a>
+           <!-- Desktop Menu -->
+<nav class="hidden md:flex space-x-8 text-[17px] font-medium items-center">
 
-                <a href="{{ route('about') }}"
-                    class="hover:text-blue-600 transition duration-300">About Us</a>
+    <a href="{{ route('home') }}" class="hover:text-blue-600 transition duration-200">Home</a>
 
-                <a href="{{ route('services') }}"
-                    class="hover:text-blue-600 transition duration-300">Services</a>
+    <a href="{{ route('about') }}" class="hover:text-blue-600 transition duration-200">About Us</a>
 
-                <a href="{{ route('news') }}"
-                    class="hover:text-blue-600 transition duration-300">News & Events</a>
+    <!-- SERVICES DROPDOWN -->
+    <div class="relative group">
+        <button id="servicesBtn" class="hover:text-blue-600 flex items-center gap-1 transition">
+            Services
+            <svg id="arrowIcon" class="w-4 h-4 transition-transform duration-300" fill="none"
+                stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+                <path d="M19 9l-7 7-7-7" />
+            </svg>
+        </button>
 
-                <a href="{{ route('career') }}"
-                    class="hover:text-blue-600 transition duration-300">Career</a>
-            </nav>
+        <!-- Dropdown -->
+        <div id="servicesMenu"
+            class="hidden absolute left-0 mt-4 w-80 bg-white shadow-xl rounded-2xl py-4 z-50 border border-gray-100">
+
+            <a href="#" class="block px-6 py-2 text-gray-700 hover:bg-gray-100">Application Development</a>
+            <a href="#" class="block px-6 py-2 text-gray-700 hover:bg-gray-100">Banking & Financial Services</a>
+            <a href="#" class="block px-6 py-2 text-gray-700 hover:bg-gray-100">Enterprise Solutions</a>
+            <a href="#" class="block px-6 py-2 text-gray-700 hover:bg-gray-100">Entertainment & VAS</a>
+            <a href="#" class="block px-6 py-2 text-gray-700 hover:bg-gray-100">IT Security</a>
+            <a href="#" class="block px-6 py-2 text-gray-700 hover:bg-gray-100">Marketing & Promotion</a>
+            <a href="#" class="block px-6 py-2 text-gray-700 hover:bg-gray-100">Payment Services</a>
+            <a href="#" class="block px-6 py-2 text-gray-700 hover:bg-gray-100">Solutions, Platforms & Tools</a>
+            <a href="#" class="block px-6 py-2 text-gray-700 hover:bg-gray-100">Insurance Services</a>
+        </div>
+    </div>
+
+    <a href="{{ route('news') }}" class="hover:text-blue-600 transition duration-200">News & Events</a>
+
+    <a href="{{ route('career') }}" class="hover:text-blue-600 transition duration-200">Career</a>
+</nav>
+
 
             <!-- Mobile Menu Button -->
             <button id="menuBtn" class="block md:hidden text-3xl">
@@ -86,6 +107,38 @@
     <main class="pt-28">
         @yield('content')
     </main>
+
+    <script>
+    feather.replace();
+
+    const menuBtn = document.getElementById("menuBtn");
+    const mobileMenu = document.getElementById("mobileMenu");
+
+    menuBtn.addEventListener("click", () => {
+        mobileMenu.classList.toggle("hidden");
+    });
+</script>
+
+<!-- ✅ Services Dropdown Script (Place Here) -->
+<script>
+    const servicesBtn = document.getElementById("servicesBtn");
+    const servicesMenu = document.getElementById("servicesMenu");
+    const arrowIcon = document.getElementById("arrowIcon");
+
+    servicesBtn && servicesBtn.addEventListener("click", () => {
+        servicesMenu.classList.toggle("hidden");
+        arrowIcon.classList.toggle("rotate-180");
+    });
+
+    // Close dropdown when clicking outside
+    document.addEventListener("click", (e) => {
+        if (!servicesBtn.contains(e.target) && !servicesMenu.contains(e.target)) {
+            servicesMenu.classList.add("hidden");
+            arrowIcon.classList.remove("rotate-180");
+        }
+    });
+</script>
+
 
     <!-- FOOTER -->
     <footer class="bg-gray-900 text-gray-300 py-12 mt-16">
