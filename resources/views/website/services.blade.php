@@ -3,6 +3,7 @@
 @section('title', 'Services - GenNet Solutions')
 
 @section('content')
+
 <!-- HERO SECTION -->
 <section class="relative h-[60vh] bg-cover bg-center flex items-center justify-center"
     style="background-image: url('https://images.unsplash.com/photo-1460925895917-adf4ee868993');">
@@ -24,15 +25,16 @@
 <section class="py-20 px-4">
     <div class="max-w-6xl mx-auto">
         <div class="grid grid-cols-1 md:grid-cols-2 gap-8 mb-20">
+
             <!-- Cloud & VM Services -->
             <div class="bg-gradient-to-br from-blue-50 to-blue-100 p-8 rounded-lg shadow-lg hover:shadow-xl transition">
                 <h3 class="text-3xl font-bold mb-4 text-blue-900">Cloud & VM Services</h3>
-                <p class="text-gray-700 mb-4">Deploy secure, scalable virtual machines and web solutions with 99.99% uptime. Perfect for startups and enterprises.</p>
+                <p class="text-gray-700 mb-4">Secure, scalable cloud infrastructure and virtual machine deployment for modern businesses.</p>
                 <ul class="list-disc list-inside space-y-2 text-gray-700 mb-6">
                     <li>Virtual Machine Hosting</li>
-                    <li>Scalable Cloud Infrastructure</li>
-                    <li>Web Hosting Solutions</li>
-                    <li>24/7 Uptime Guarantee</li>
+                    <li>Cloud Storage & Backup</li>
+                    <li>Scalable Cloud Servers</li>
+                    <li>High Availability Uptime</li>
                 </ul>
                 <a href="#" class="inline-block bg-blue-600 text-white px-6 py-2 rounded hover:bg-blue-700">Learn More</a>
             </div>
@@ -40,110 +42,107 @@
             <!-- Email & Hosting -->
             <div class="bg-gradient-to-br from-green-50 to-green-100 p-8 rounded-lg shadow-lg hover:shadow-xl transition">
                 <h3 class="text-3xl font-bold mb-4 text-green-900">Email & Hosting Solutions</h3>
-                <p class="text-gray-700 mb-4">Office 365, Google Workspace & Domain solutions for professional communication and collaboration.</p>
+                <p class="text-gray-700 mb-4">Professional-grade email, domain and hosting systems for seamless communication.</p>
                 <ul class="list-disc list-inside space-y-2 text-gray-700 mb-6">
-                    <li>Office 365 Implementation</li>
-                    <li>Google Workspace Setup</li>
-                    <li>Domain Registration & Management</li>
-                    <li>Email Security</li>
+                    <li>Business Email Setup</li>
+                    <li>Google Workspace</li>
+                    <li>Domain Registration</li>
+                    <li>Secure Email Hosting</li>
                 </ul>
                 <a href="#" class="inline-block bg-green-600 text-white px-6 py-2 rounded hover:bg-green-700">Learn More</a>
             </div>
 
-            <!-- AI Solutions -->
+            <!-- AI Software Solutions -->
             <div class="bg-gradient-to-br from-purple-50 to-purple-100 p-8 rounded-lg shadow-lg hover:shadow-xl transition">
                 <h3 class="text-3xl font-bold mb-4 text-purple-900">AI Software Solutions</h3>
-                <p class="text-gray-700 mb-4">Transform your business with intelligent automation, predictive analytics, and AI-driven custom applications.</p>
+                <p class="text-gray-700 mb-4">Intelligent automation, machine learning systems and predictive analytics for business growth.</p>
                 <ul class="list-disc list-inside space-y-2 text-gray-700 mb-6">
-                    <li>Custom AI Applications</li>
-                    <li>Intelligent Automation</li>
-                    <li>Predictive Analytics</li>
-                    <li>Machine Learning Integration</li>
+                    <li>AI Custom Development</li>
+                    <li>Business Process Automation</li>
+                    <li>Machine Learning Models</li>
+                    <li>Data Insights & Analytics</li>
                 </ul>
                 <a href="#" class="inline-block bg-purple-600 text-white px-6 py-2 rounded hover:bg-purple-700">Learn More</a>
             </div>
 
-            <!-- Security Solutions -->
+            <!-- AI-Powered Security -->
             <div class="bg-gradient-to-br from-red-50 to-red-100 p-8 rounded-lg shadow-lg hover:shadow-xl transition">
                 <h3 class="text-3xl font-bold mb-4 text-red-900">AI-Powered Security</h3>
-                <p class="text-gray-700 mb-4">Real-time threat detection, intelligent surveillance, and proactive security analytics powered by AI.</p>
+                <p class="text-gray-700 mb-4">Smart security, real-time threat detection and AI-based protection systems.</p>
                 <ul class="list-disc list-inside space-y-2 text-gray-700 mb-6">
-                    <li>Real-time Threat Detection</li>
-                    <li>AI Security Analytics</li>
+                    <li>AI Threat Monitoring</li>
                     <li>Cybersecurity Solutions</li>
-                    <li>Security Auditing</li>
+                    <li>Incident Detection</li>
+                    <li>Security Audits</li>
                 </ul>
                 <a href="#" class="inline-block bg-red-600 text-white px-6 py-2 rounded hover:bg-red-700">Learn More</a>
             </div>
 
-            <!-- Surveillance Systems -->
+            <!-- 24/7 Surveillance -->
             <div class="bg-gradient-to-br from-yellow-50 to-yellow-100 p-8 rounded-lg shadow-lg hover:shadow-xl transition">
                 <h3 class="text-3xl font-bold mb-4 text-yellow-900">24/7 Surveillance Systems</h3>
-                <p class="text-gray-700 mb-4">Cutting-edge surveillance systems with real-time alerts and remote access capabilities for your peace of mind.</p>
+                <p class="text-gray-700 mb-4">Advanced CCTV, remote monitoring and alert-based surveillance for complete protection.</p>
                 <ul class="list-disc list-inside space-y-2 text-gray-700 mb-6">
                     <li>CCTV Installation</li>
-                    <li>Remote Monitoring</li>
-                    <li>Real-time Alerts</li>
-                    <li>Video Analytics</li>
+                    <li>Remote Live Monitoring</li>
+                    <li>Real-time Notifications</li>
+                    <li>AI Video Analytics</li>
                 </ul>
                 <a href="#" class="inline-block bg-yellow-600 text-white px-6 py-2 rounded hover:bg-yellow-700">Learn More</a>
             </div>
 
-            <!-- Network Services -->
+            <!-- Managed Network Services -->
             <div class="bg-gradient-to-br from-indigo-50 to-indigo-100 p-8 rounded-lg shadow-lg hover:shadow-xl transition">
                 <h3 class="text-3xl font-bold mb-4 text-indigo-900">Managed Network Services</h3>
-                <p class="text-gray-700 mb-4">CP, VPN, APN, VAS & MFS Solutions for secure and scalable network infrastructure.</p>
+                <p class="text-gray-700 mb-4">Complete management of enterprise networks including VPN, APN, CP & telecom solutions.</p>
                 <ul class="list-disc list-inside space-y-2 text-gray-700 mb-6">
                     <li>VPN Solutions</li>
-                    <li>Network Security</li>
-                    <li>Managed Services</li>
-                    <li>Telecom Integration</li>
+                    <li>Network Management</li>
+                    <li>Telecom Integrations</li>
+                    <li>Secure Infrastructure</li>
                 </ul>
                 <a href="#" class="inline-block bg-indigo-600 text-white px-6 py-2 rounded hover:bg-indigo-700">Learn More</a>
             </div>
-        </div>
 
-        <!-- Additional Services -->
-        <div class="mt-20 pt-20 border-t border-gray-300">
-            <h2 class="text-4xl font-bold mb-12 text-center">Additional Services</h2>
-
-            <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
-                <div class="p-6 bg-white rounded-lg shadow hover:shadow-lg transition">
-                    <i class="ri-smartphone-line text-4xl text-blue-600 mb-4 block"></i>
-                    <h4 class="text-xl font-bold mb-2">Custom Software Development</h4>
-                    <p class="text-gray-600">Tailor-made software solutions designed to meet your specific business requirements.</p>
-                </div>
-
-                <div class="p-6 bg-white rounded-lg shadow hover:shadow-lg transition">
-                    <i class="ri-phone-line text-4xl text-green-600 mb-4 block"></i>
-                    <h4 class="text-xl font-bold mb-2">Call Center Solutions</h4>
-                    <p class="text-gray-600">Enterprise-grade communication systems for customer support and operations.</p>
-                </div>
-
-                <div class="p-6 bg-white rounded-lg shadow hover:shadow-lg transition">
-                    <i class="ri-computer-line text-4xl text-purple-600 mb-4 block"></i>
-                    <h4 class="text-xl font-bold mb-2">IT Consulting</h4>
-                    <p class="text-gray-600">Strategic IT consulting to optimize your technology infrastructure.</p>
-                </div>
-
-                <div class="p-6 bg-white rounded-lg shadow hover:shadow-lg transition">
-                    <i class="ri-map-pin-line text-4xl text-red-600 mb-4 block"></i>
-                    <h4 class="text-xl font-bold mb-2">Tracking Systems</h4>
-                    <p class="text-gray-600">Real-time asset and fleet tracking solutions with advanced analytics.</p>
-                </div>
-
-                <div class="p-6 bg-white rounded-lg shadow hover:shadow-lg transition">
-                    <i class="ri-mobile-line text-4xl text-orange-600 mb-4 block"></i>
-                    <h4 class="text-xl font-bold mb-2">Mobile App Development</h4>
-                    <p class="text-gray-600">Native and cross-platform mobile applications for iOS and Android.</p>
-                </div>
-
-                <div class="p-6 bg-white rounded-lg shadow hover:shadow-lg transition">
-                    <i class="ri-chat-1-line text-4xl text-indigo-600 mb-4 block"></i>
-                    <h4 class="text-xl font-bold mb-2">Bulk SMS Services</h4>
-                    <p class="text-gray-600">Enterprise-grade bulk messaging platform for business communication.</p>
-                </div>
+            <!-- SMS Services -->
+            <div class="bg-gradient-to-br from-pink-50 to-pink-100 p-8 rounded-lg shadow-lg hover:shadow-xl transition">
+                <h3 class="text-3xl font-bold mb-4 text-pink-900">SMS Services</h3>
+                <p class="text-gray-700 mb-4">Enterprise-grade bulk messaging and OTP solutions for communication at scale.</p>
+                <ul class="list-disc list-inside space-y-2 text-gray-700 mb-6">
+                    <li>Bulk SMS</li>
+                    <li>OTP Services</li>
+                    <li>Transactional Messaging</li>
+                    <li>API Integration</li>
+                </ul>
+                <a href="#" class="inline-block bg-pink-600 text-white px-6 py-2 rounded hover:bg-pink-700">Learn More</a>
             </div>
+
+            <!-- Microsoft Services -->
+            <div class="bg-gradient-to-br from-gray-100 to-gray-200 p-8 rounded-lg shadow-lg hover:shadow-xl transition">
+                <h3 class="text-3xl font-bold mb-4 text-gray-900">Microsoft Services</h3>
+                <p class="text-gray-700 mb-4">End-to-end Microsoft solutions including Azure, Office 365 and enterprise tools.</p>
+                <ul class="list-disc list-inside space-y-2 text-gray-700 mb-6">
+                    <li>Microsoft 365 Deployment</li>
+                    <li>Azure Cloud Services</li>
+                    <li>Enterprise Email</li>
+                    <li>Device & User Management</li>
+                </ul>
+                <a href="#" class="inline-block bg-gray-800 text-white px-6 py-2 rounded hover:bg-gray-900">Learn More</a>
+            </div>
+
+            <!-- Customized Call Center -->
+            <div class="bg-gradient-to-br from-orange-50 to-orange-100 p-8 rounded-lg shadow-lg hover:shadow-xl transition">
+                <h3 class="text-3xl font-bold mb-4 text-orange-900">Customized Call Center Services</h3>
+                <p class="text-gray-700 mb-4">Fully customized inbound, outbound and automated call center systems.</p>
+                <ul class="list-disc list-inside space-y-2 text-gray-700 mb-6">
+                    <li>Call Center Setup</li>
+                    <li>IVR Systems</li>
+                    <li>Customer Support Tools</li>
+                    <li>Reporting & Monitoring</li>
+                </ul>
+                <a href="#" class="inline-block bg-orange-600 text-white px-6 py-2 rounded hover:bg-orange-700">Learn More</a>
+            </div>
+
         </div>
     </div>
 </section>
@@ -158,4 +157,5 @@
         </a>
     </div>
 </section>
+
 @endsection

@@ -56,15 +56,15 @@
         <div id="servicesMenu"
             class="hidden absolute left-0 mt-4 w-80 bg-white shadow-xl rounded-2xl py-4 z-50 border border-gray-100">
 
-            <a href="#" class="block px-6 py-2 text-gray-700 hover:bg-gray-100">Application Development</a>
-            <a href="#" class="block px-6 py-2 text-gray-700 hover:bg-gray-100">Banking & Financial Services</a>
-            <a href="#" class="block px-6 py-2 text-gray-700 hover:bg-gray-100">Enterprise Solutions</a>
-            <a href="#" class="block px-6 py-2 text-gray-700 hover:bg-gray-100">Entertainment & VAS</a>
-            <a href="#" class="block px-6 py-2 text-gray-700 hover:bg-gray-100">IT Security</a>
-            <a href="#" class="block px-6 py-2 text-gray-700 hover:bg-gray-100">Marketing & Promotion</a>
-            <a href="#" class="block px-6 py-2 text-gray-700 hover:bg-gray-100">Payment Services</a>
-            <a href="#" class="block px-6 py-2 text-gray-700 hover:bg-gray-100">Solutions, Platforms & Tools</a>
-            <a href="#" class="block px-6 py-2 text-gray-700 hover:bg-gray-100">Insurance Services</a>
+            <a href="#" class="block px-6 py-2 text-gray-700 hover:bg-gray-100">Cloud & VM Services</a>
+            <a href="#" class="block px-6 py-2 text-gray-700 hover:bg-gray-100">Email & Hosting Solutions</a>
+            <a href="#" class="block px-6 py-2 text-gray-700 hover:bg-gray-100">AI Software Solutions</a>
+            <a href="#" class="block px-6 py-2 text-gray-700 hover:bg-gray-100">AI-Powered Security</a>
+            <a href="#" class="block px-6 py-2 text-gray-700 hover:bg-gray-100">24/7 Surveillance</a>
+            <a href="#" class="block px-6 py-2 text-gray-700 hover:bg-gray-100">Managed Network Services</a>
+            <a href="#" class="block px-6 py-2 text-gray-700 hover:bg-gray-100">SMS Services</a>
+            <a href="#" class="block px-6 py-2 text-gray-700 hover:bg-gray-100">Microsoft Services</a>
+            <a href="#" class="block px-6 py-2 text-gray-700 hover:bg-gray-100">Customized Call Center Services</a>
         </div>
     </div>
 
