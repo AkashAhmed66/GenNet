@@ -31,3 +31,25 @@ Route::middleware('auth')->group(function () {
 });
 
 require __DIR__.'/auth.php';
+
+
+/* ================================
+   SERVICES - INDIVIDUAL PAGES
+================================ */
+
+Route::view('/services/cloud', 'services.cloud')->name('services.cloud');
+Route::view('/services/email', 'services.email')->name('services.email');
+Route::view('/services/ai', 'services.ai')->name('services.ai');
+Route::view('/services/security', 'services.security')->name('services.security');
+Route::view('/services/surveillance', 'services.surveillance')->name('services.surveillance');
+Route::view('/services/network', 'services.network')->name('services.network');
+Route::view('/services/sms', 'services.sms')->name('services.sms');
+Route::view('/services/microsoft', 'services.microsoft')->name('services.microsoft');
+Route::view('/services/call-center', 'services.call-center')->name('services.call-center');
+
+Route::view('/services/sms', 'services.sms')->name('services.sms');
+
+Route::view('/services/microsoft', 'services.microsoft')->name('services.microsoft');
+
+Route::view('/services/call-center', 'services.call-center')->name('services.call-center');
+

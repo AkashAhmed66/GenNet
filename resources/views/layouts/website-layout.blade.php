@@ -15,6 +15,7 @@
 
     <!-- Icons -->
     <script src="https://unpkg.com/feather-icons"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/remixicon@4.0.0/fonts/remixicon.css">
 
     <style>
         body {
@@ -54,17 +55,36 @@
 
         <!-- Dropdown -->
         <div id="servicesMenu"
-            class="hidden absolute left-0 mt-4 w-80 bg-white shadow-xl rounded-2xl py-4 z-50 border border-gray-100">
+            class="hidden absolute left-0 mt-4 w-64 bg-white shadow-xl rounded-xl py-3 z-50 border border-gray-200">
 
-            <a href="#" class="block px-6 py-2 text-gray-700 hover:bg-gray-100">Cloud & VM Services</a>
-            <a href="#" class="block px-6 py-2 text-gray-700 hover:bg-gray-100">Email & Hosting Solutions</a>
-            <a href="#" class="block px-6 py-2 text-gray-700 hover:bg-gray-100">AI Software Solutions</a>
-            <a href="#" class="block px-6 py-2 text-gray-700 hover:bg-gray-100">AI-Powered Security</a>
-            <a href="#" class="block px-6 py-2 text-gray-700 hover:bg-gray-100">24/7 Surveillance</a>
-            <a href="#" class="block px-6 py-2 text-gray-700 hover:bg-gray-100">Managed Network Services</a>
-            <a href="#" class="block px-6 py-2 text-gray-700 hover:bg-gray-100">SMS Services</a>
-            <a href="#" class="block px-6 py-2 text-gray-700 hover:bg-gray-100">Microsoft Services</a>
-            <a href="#" class="block px-6 py-2 text-gray-700 hover:bg-gray-100">Customized Call Center Services</a>
+            <a href="{{ route('services.cloud') }}" class="block px-4 py-2 hover:bg-blue-50 hover:text-blue-600 transition text-gray-700">
+                <i class="ri-cloud-line mr-2"></i>Cloud & VM Services
+            </a>
+            <a href="{{ route('services.email') }}" class="block px-4 py-2 hover:bg-green-50 hover:text-green-600 transition text-gray-700">
+                <i class="ri-mail-line mr-2"></i>Email & Hosting Solutions
+            </a>
+            <a href="{{ route('services.ai') }}" class="block px-4 py-2 hover:bg-purple-50 hover:text-purple-600 transition text-gray-700">
+                <i class="ri-brain-line mr-2"></i>AI Software Solutions
+            </a>
+            <a href="{{ route('services.security') }}" class="block px-4 py-2 hover:bg-red-50 hover:text-red-600 transition text-gray-700">
+                <i class="ri-shield-lock-line mr-2"></i>AI-Powered Security
+            </a>
+            <a href="{{ route('services.surveillance') }}" class="block px-4 py-2 hover:bg-yellow-50 hover:text-yellow-600 transition text-gray-700">
+                <i class="ri-camera-line mr-2"></i>24/7 Surveillance
+            </a>
+            <a href="{{ route('services.network') }}" class="block px-4 py-2 hover:bg-indigo-50 hover:text-indigo-600 transition text-gray-700">
+                <i class="ri-router-line mr-2"></i>Managed Network Services
+            </a>
+            <a href="{{ route('services.sms') }}" class="block px-4 py-2 hover:bg-indigo-50 hover:text-indigo-600 transition text-gray-700">
+                <i class="ri-chat-1-line mr-2"></i>SMS Services
+            </a>
+            <a href="{{ route('services.microsoft') }}" class="block px-4 py-2 hover:bg-blue-50 hover:text-blue-600 transition text-gray-700">
+                <i class="ri-microsoft-line mr-2"></i>Microsoft Services
+            </a>
+            <a href="{{ route('services.call-center') }}" class="block px-4 py-2 hover:bg-green-50 hover:text-green-600 transition text-gray-700">
+                <i class="ri-phone-line mr-2"></i>Customized Call Center
+            </a>
+
         </div>
     </div>
 
@@ -74,22 +94,25 @@
 </nav>
 
 
+
             <!-- Mobile Menu Button -->
-            <button id="menuBtn" class="block md:hidden text-3xl">
+            <button id="menuBtn" class="block md:hidden text-3xl text-white">
                 <i data-feather="menu"></i>
             </button>
+
         </div>
 
         <!-- Mobile Menu -->
-        <div id="mobileMenu" class="hidden bg-white shadow-md border-t">
-            <nav class="px-6 py-4 space-y-4 text-lg">
-                <a href="{{ route('home') }}" class="block hover:text-blue-600">Home</a>
-                <a href="{{ route('about') }}" class="block hover:text-blue-600">About Us</a>
-                <a href="{{ route('services') }}" class="block hover:text-blue-600">Services</a>
-                <a href="{{ route('news') }}" class="block hover:text-blue-600">News & Events</a>
-                <a href="{{ route('career') }}" class="block hover:text-blue-600">Career</a>
-            </nav>
-        </div>
+            <div id="mobileMenu" class="hidden bg-white shadow-md border-t">
+                <nav class="px-6 py-4 space-y-4 text-lg">
+                    <a href="{{ route('home') }}" class="block hover:text-blue-600">Home</a>
+                    <a href="{{ route('about') }}" class="block hover:text-blue-600">About Us</a>
+                    <a href="{{ route('services') }}" class="block hover:text-blue-600">Services</a>
+                    <a href="{{ route('news') }}" class="block hover:text-blue-600">News & Events</a>
+                    <a href="{{ route('career') }}" class="block hover:text-blue-600">Career</a>
+                </nav>
+            </div>
+
     </header>
 
     <script>

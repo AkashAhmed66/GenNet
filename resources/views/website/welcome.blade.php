@@ -74,7 +74,7 @@
 </section>
 
 <!-- SERVICES OVERVIEW SECTION -->
-<section class="py-20 px-4 bg-gray-50">
+<section id="services" class="py-15 px-4 bg-gray-50">
     <div class="max-w-6xl mx-auto px-4 py-16">
         <div class="max-w-4xl mx-auto text-center mb-16">
             <h2 class="text-4xl md:text-5xl font-bold mb-4">Discover what we offer</h2>
@@ -82,156 +82,125 @@
                  Whether you’re modernizing your workflows, creating powerful digital platforms, or designing solutions to connect with your audience, we’re here to help you succeed.</p>
         </div>
 
-        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            <!-- Cloud Solutions -->
-            <div class="bg-white aspect-square p-5 rounded-lg shadow-lg hover:shadow-xl transition group hover:bg-blue-500 flex flex-col items-center justify-center text-center">
-                <div class="w-12 h-12 bg-blue-100 rounded-full flex items-center justify-center mb-4">
-                    <i class="ri-cloud-line text-xl text-blue-600 group-hover:text-white"></i>
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- Cloud Solutions -->
+                <div class="bg-gradient-to-r from-gray-100 to-white p-5 rounded-lg border border-gray-300 shadow-lg hover:shadow-xl transition group flex flex-col items-center justify-center text-center cursor-pointer">
+                    <div class="w-12 h-12 bg-blue-100 rounded-full flex items-center justify-center mb-4">
+                        <i class="ri-cloud-line text-xl text-blue-600 group-hover:text-blue-800 transition"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-2 group-hover:text-gray-800 transition">Cloud & VM Services</h3>
+                    <a href="{{ route('services.cloud') }}" class="text-blue-600 font-semibold group-hover:text-blue-800 transition">Learn More →</a>
                 </div>
-                <h3 class="text-xl font-bold mb-2 group-hover:text-white">Cloud & VM Services</h3>
-                <a href="{{ route('services') }}" class="text-blue-600 font-semibold group-hover:text-white">Learn More →</a>
+
+                <!-- Email & Hosting -->
+                <div class="bg-gradient-to-r from-gray-100 to-white p-6 rounded-lg border border-gray-300 shadow-lg hover:shadow-xl transition group flex flex-col items-center justify-center text-center cursor-pointer">
+                    <div class="w-12 h-12 bg-green-100 rounded-full flex items-center justify-center mb-4">
+                        <i class="ri-mail-line text-xl text-green-600 group-hover:text-green-800 transition"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-2 group-hover:text-gray-800 transition">Email & Hosting Solutions</h3>
+                    <a href="{{ route('services.email') }}" class="text-green-600 font-semibold group-hover:text-green-800 transition">Learn More →</a>
+                </div>
+
+                <!-- AI Solutions -->
+                <div class="bg-gradient-to-r from-gray-100 to-white p-6 rounded-lg border border-gray-300 shadow-lg hover:shadow-xl transition group flex flex-col items-center justify-center text-center cursor-pointer">
+                    <div class="w-12 h-12 bg-purple-100 rounded-full flex items-center justify-center mb-4">
+                        <i class="ri-brain-line text-xl text-purple-600 group-hover:text-purple-800 transition"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-2 group-hover:text-gray-800 transition">AI Software Solutions</h3>
+                    <a href="{{ route('services.ai') }}" class="text-purple-600 font-semibold group-hover:text-purple-800 transition">Learn More →</a>
+                </div>
+
+                <!-- Security Solutions -->
+                <div class="bg-gradient-to-r from-gray-100 to-white p-6 rounded-lg border border-gray-300 shadow-lg hover:shadow-xl transition group flex flex-col items-center justify-center text-center cursor-pointer">
+                    <div class="w-12 h-12 bg-red-100 rounded-full flex items-center justify-center mb-4">
+                        <i class="ri-shield-lock-line text-xl text-red-600 group-hover:text-red-800 transition"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-2 group-hover:text-gray-800 transition">AI-Powered Security</h3>
+                    <a href="{{ route('services.security') }}" class="text-red-600 font-semibold group-hover:text-red-800 transition">Learn More →</a>
+                </div>
+
+                <!-- Surveillance -->
+                <div class="bg-gradient-to-r from-gray-100 to-white p-6 rounded-lg border border-gray-300 shadow-lg hover:shadow-xl transition group flex flex-col items-center justify-center text-center cursor-pointer">
+                    <div class="w-12 h-12 bg-yellow-100 rounded-full flex items-center justify-center mb-4">
+                        <i class="ri-camera-line text-xl text-yellow-600 group-hover:text-yellow-800 transition"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-2 group-hover:text-gray-800 transition">24/7 Surveillance</h3>
+                    <a href="{{ route('services.surveillance') }}" class="text-yellow-600 font-semibold group-hover:text-yellow-800 transition">Learn More →</a>
+                </div>
+
+                <!-- Network Services -->
+                <div class="bg-gradient-to-r from-gray-100 to-white p-6 rounded-lg border border-gray-300 shadow-lg hover:shadow-xl transition group flex flex-col items-center justify-center text-center cursor-pointer">
+                    <div class="w-12 h-12 bg-indigo-100 rounded-full flex items-center justify-center mb-4">
+                        <i class="ri-router-line text-xl text-indigo-600 group-hover:text-indigo-800 transition"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-2 group-hover:text-gray-800 transition">Managed Network Services</h3>
+                    <a href="{{ route('services.network') }}" class="text-indigo-600 font-semibold group-hover:text-indigo-800 transition">Learn More →</a>
+                </div>
+
+                <!-- SMS Services -->
+                <div class="bg-gradient-to-r from-gray-100 to-white p-6 rounded-lg border border-gray-300 shadow-lg hover:shadow-xl transition group flex flex-col items-center justify-center text-center cursor-pointer">
+                    <div class="w-12 h-12 bg-indigo-100 rounded-full flex items-center justify-center mb-4">
+                        <i class="ri-chat-3-line text-xl text-indigo-600 group-hover:text-indigo-800 transition"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-2 group-hover:text-gray-800 transition">SMS Services</h3>
+                    <a href="{{ route('services.sms') }}" class="text-indigo-600 font-semibold group-hover:text-indigo-800 transition">Learn More →</a>
+                </div>
+
+                <!-- Microsoft Services -->
+                <div class="bg-gradient-to-r from-gray-100 to-white p-6 rounded-lg border border-gray-300 shadow-lg hover:shadow-xl transition group flex flex-col items-center justify-center text-center cursor-pointer">
+                    <div class="w-12 h-12 bg-blue-100 rounded-full flex items-center justify-center mb-4">
+                        <i class="ri-microsoft-line text-xl text-blue-600 group-hover:text-blue-800 transition"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-2 group-hover:text-gray-800 transition">Microsoft Services</h3>
+                    <a href="{{ route('services.microsoft') }}" class="text-blue-600 font-semibold group-hover:text-blue-800 transition">Learn More →</a>
+                </div>
+
+                <!-- Call Services -->
+                <div class="bg-gradient-to-r from-gray-100 to-white p-6 rounded-lg border border-gray-300 shadow-lg hover:shadow-xl transition group flex flex-col items-center justify-center text-center cursor-pointer">
+                    <div class="w-12 h-12 bg-green-100 rounded-full flex items-center justify-center mb-4">
+                        <i class="ri-phone-line text-xl text-green-600 group-hover:text-green-800 transition"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-2 group-hover:text-gray-800 transition">Customized Call Center Services</h3>
+                    <a href="{{ route('services.call-center') }}" class="text-green-600 font-semibold group-hover:text-green-800 transition">Learn More →</a>
+                </div>
             </div>
 
-            <!-- Email & Hosting -->
-            <div class="bg-white aspect-square p-6 rounded-lg shadow-lg hover:shadow-xl transition  group hover:bg-blue-500 flex flex-col items-center justify-center text-center">
-                <div class="w-12 h-12 bg-green-100 rounded-full flex items-center justify-center mb-4">
-                    <i class="ri-mail-line text-xl text-green-600 group-hover:text-white"></i>
-                </div>
-                <h3 class="text-xl font-bold mb-2 group-hover:text-white">Email & Hosting Solutions</h3>
-                <a href="{{ route('services') }}" class="text-green-600 font-semibold group-hover:text-white">Learn More →</a>
-            </div>
-
-            <!-- AI Solutions -->
-            <div class="bg-white aspect-square p-6 rounded-lg shadow-lg hover:shadow-xl transition  group hover:bg-blue-500 flex flex-col items-center justify-center text-center">
-                <div class="w-12 h-12 bg-purple-100 rounded-full flex items-center justify-center mb-4">
-                    <i class="ri-cpu-line text-xl text-purple-600 group-hover:text-white"></i>
-                </div>
-                <h3 class="text-xl font-bold mb-2 group-hover:text-white">AI Software Solutions</h3>
-                <a href="{{ route('services') }}" class="text-purple-600 font-semibold group-hover:text-white">Learn More →</a>
-            </div>
-
-            <!-- Security Solutions -->
-            <div class="bg-white aspect-square p-6 rounded-lg shadow-lg hover:shadow-xl transition  group   hover:bg-blue-500 flex flex-col items-center justify-center text-center">
-                <div class="w-12 h-12 bg-red-100 rounded-full flex items-center justify-center mb-4">
-                    <i class="ri-shield-lock-line text-xl text-red-600 group-hover:text-white"></i>
-                </div>
-                <h3 class="text-xl font-bold mb-2 group-hover:text-white">AI-Powered Security</h3>
-                <a href="{{ route('services') }}" class="text-red-600 font-semibold group-hover:text-white">Learn More →</a>
-            </div>
-
-            <!-- Surveillance -->
-            <div class="bg-white aspect-square p-6 rounded-lg shadow-lg hover:shadow-xl transition  group hover:bg-blue-500 flex flex-col items-center justify-center text-center">
-                <div class="w-12 h-12 bg-yellow-100 rounded-full flex items-center justify-center mb-4">
-                    <i class="ri-camera-line text-xl text-yellow-600 group-hover:text-white"></i>
-                </div>
-                <h3 class="text-xl font-bold mb-2 group-hover:text-white">24/7 Surveillance</h3>
-                <a href="{{ route('services') }}" class="text-yellow-600 font-semibold group-hover:text-white">Learn More →</a>
-            </div>
-
-            <!-- Network Services -->
-            <div class="bg-white aspect-square p-6 rounded-lg shadow-lg hover:shadow-xl transition  group hover:bg-blue-500 flex flex-col items-center justify-center text-center">
-                <div class="w-12 h-12 bg-indigo-100 rounded-full flex items-center justify-center mb-4">
-                    <i class="ri-router-line text-xl text-indigo-600 group-hover:text-white"></i>
-                </div>
-                <h3 class="text-xl font-bold mb-2 group-hover:text-white">Managed Network Services</h3>
-                <a href="{{ route('services') }}" class="text-indigo-600 font-semibold group-hover:text-white">Learn More →</a>
-            </div>
-
-            <!-- SMS Services -->
-            <div class="bg-white aspect-square p-6 rounded-lg shadow-lg hover:shadow-xl transition  group hover:bg-blue-500 flex flex-col items-center justify-center text-center">
-                <div class="w-12 h-12 bg-indigo-100 rounded-full flex items-center justify-center mb-4">
-                     <i class="ri-chat-3-line text-xl text-indigo-600 group-hover:text-white"></i>
-                </div>
-                <h3 class="text-xl font-bold mb-2 group-hover:text-white"> SMS Services</h3>
-                <a href="{{ route('services') }}" class="text-indigo-600 font-semibold group-hover:text-white">Learn More →</a>
-            </div>
-
-            <!-- Microsoft Services -->
-            <div class="bg-white aspect-square p-6 rounded-lg shadow-lg hover:shadow-xl transition  group hover:bg-blue-500 flex flex-col items-center justify-center text-center">
-                <div class="w-12 h-12 bg-indigo-100 rounded-full flex items-center justify-center mb-4">
-                    <i class="ri-windows-line text-xl text-blue-600 group-hover:text-white"></i>
-                </div>
-                <h3 class="text-xl font-bold mb-2 group-hover:text-white">Microsoft Services</h3>
-                <a href="{{ route('services') }}" class="text-indigo-600 font-semibold group-hover:text-white">Learn More →</a>
-            </div>
-
-            <!-- call  Services -->
-            <div class="bg-white aspect-square p-6 rounded-lg shadow-lg hover:shadow-xl transition  group hover:bg-blue-500 flex flex-col items-center justify-center text-center">
-                <div class="w-12 h-12 bg-indigo-100 rounded-full flex items-center justify-center mb-4">
-                    <i class="ri-phone-line text-xl text-indigo-600 group-hover:text-white"></i>
-                </div>
-                <h3 class="text-xl font-bold mb-2 group-hover:text-white">Customized Call Center Services</h3>
-                <a href="{{ route('services') }}" class="text-indigo-600 font-semibold group-hover:text-white">Learn More →</a>
-            </div>
-
-        </div>
 
     </div>
 </section>
 
-<!-- INDUSTRIES SERVED -->
-<section class="py-20 px-4">
-    <div class="max-w-7xl mx-auto">
-        <div class="text-center mb-16">
-            <h2 class="text-4xl md:text-5xl font-bold mb-4">Industries We Serve</h2>
-            <p class="text-xl text-gray-600">Trusted by businesses across multiple sectors</p>
+<!-- IT SOLUTIONS SECTION -->
+<section class="py-20 px-4 bg-gray-50">
+    <div class="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
+
+        <!-- Image Section -->
+        <div class="flex justify-center">
+            <img src="{{ asset('images/idea.jpg') }}"
+                 alt="Hands holding puzzle pieces"
+                 class="rounded-lg shadow-lg w-96 h-96">
         </div>
 
-        <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-6">
-            <div class="text-center p-6 bg-white rounded-lg shadow hover:shadow-lg transition">
-                <i class="ri-building-line text-4xl text-blue-600 mb-2 block"></i>
-                <p class="font-semibold">Real Estate</p>
-            </div>
-            <div class="text-center p-6 bg-white rounded-lg shadow hover:shadow-lg transition">
-                <i class="ri-hospital-line text-4xl text-red-600 mb-2 block"></i>
-                <p class="font-semibold">Healthcare</p>
-            </div>
-            <div class="text-center p-6 bg-white rounded-lg shadow hover:shadow-lg transition">
-                <i class="ri-capsule-line text-4xl text-green-600 mb-2 block"></i>
-                <p class="font-semibold">Pharmaceuticals</p>
-            </div>
-            <div class="text-center p-6 bg-white rounded-lg shadow hover:shadow-lg transition">
-                <i class="ri-hotel-line text-4xl text-orange-600 mb-2 block"></i>
-                <p class="font-semibold">Hospitality</p>
-            </div>
-            <div class="text-center p-6 bg-white rounded-lg shadow hover:shadow-lg transition">
-                <i class="ri-shopping-cart-line text-4xl text-purple-600 mb-2 block"></i>
-                <p class="font-semibold">Retail</p>
-            </div>
-            <div class="text-center p-6 bg-white rounded-lg shadow hover:shadow-lg transition">
-                <i class="ri-book-line text-4xl text-indigo-600 mb-2 block"></i>
-                <p class="font-semibold">Education</p>
-            </div>
-            <div class="text-center p-6 bg-white rounded-lg shadow hover:shadow-lg transition">
-                <i class="ri-flashlight-line text-4xl text-yellow-600 mb-2 block"></i>
-                <p class="font-semibold">Energy</p>
-            </div>
-            <div class="text-center p-6 bg-white rounded-lg shadow hover:shadow-lg transition">
-                <i class="ri-factory-line text-4xl text-gray-600 mb-2 block"></i>
-                <p class="font-semibold">Manufacturing</p>
-            </div>
-            <div class="text-center p-6 bg-white rounded-lg shadow hover:shadow-lg transition">
-                <i class="ri-smartphone-line text-4xl text-blue-500 mb-2 block"></i>
-                <p class="font-semibold">Telecom</p>
-            </div>
-            <div class="text-center p-6 bg-white rounded-lg shadow hover:shadow-lg transition">
-                <i class="ri-stock-line text-4xl text-green-700 mb-2 block"></i>
-                <p class="font-semibold">Trading</p>
-            </div>
-            <div class="text-center p-6 bg-white rounded-lg shadow hover:shadow-lg transition">
-                <i class="ri-restaurant-line text-4xl text-red-500 mb-2 block"></i>
-                <p class="font-semibold">Restaurants</p>
-            </div>
-            <div class="text-center p-6 bg-white rounded-lg shadow hover:shadow-lg transition">
-                <i class="ri-shirt-line text-4xl text-pink-600 mb-2 block"></i>
-                <p class="font-semibold">Textiles</p>
-            </div>
+        <!-- Text Section -->
+        <div>
+            <h2 class="text-4xl md:text-5xl font-bold mb-6 text-gray-800">
+                IT solutions for your business.
+            </h2>
+            <ul class="space-y-4 text-lg text-gray-700">
+                <li>✓ Draws on over a decade of industry experience</li>
+                <li>✓ Known for superior technical skills in IT solutions</li>
+                <li>✓ Offers high-quality support services</li>
+                <li>✓ Specializes in software development and services</li>
+                <li>✓ Deep expertise in Value-Added Services (VAS)</li>
+                <li>✓ Strong presence in the Banking and Corporate sectors</li>
+                <li>✓ Significant footprint in the FinTech industry in Bangladesh</li>
+            </ul>
         </div>
     </div>
 </section>
+
 
 <!-- CTA SECTION -->
-<section class="py-20 px-4 bg-blue-600 text-white">
+<section class="py-20 px-4 bg-indigo-900 text-white">
     <div class="max-w-4xl mx-auto text-center">
         <h2 class="text-4xl md:text-5xl font-bold mb-6">Ready to Transform Your Business?</h2>
         <p class="text-xl mb-8">Get in touch with our team to discuss your IT needs and find the perfect solution.</p>

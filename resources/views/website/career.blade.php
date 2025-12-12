@@ -3,143 +3,221 @@
 @section('title', 'Career - Join GenNet')
 
 @section('content')
+<!-- Add Remix Icon CDN -->
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/remixicon@4.0.0/fonts/remixicon.css">
+
 <!-- HERO SECTION -->
-<section class="relative h-[60vh] bg-cover bg-center flex items-center justify-center"
-    style="background-image: url('https://images.unsplash.com/photo-1531497865144-0464ddf3f27f');">
-    <div class="absolute inset-0 bg-black bg-opacity-50"></div>
+<section class="relative h-[50vh] bg-cover bg-center flex items-center justify-center"
+    style="background-image: url('{{ asset('images/logo/pexels-fauxels-3184339.jpg')}}');">
+    <div class="absolute inset-0 bg-black bg-opacity-60"></div>
 
     <div class="relative flex items-center justify-center h-full text-center text-white px-6">
         <div>
-            <h1 class="text-4xl md:text-5xl font-bold">Join Our Team</h1>
-            <p class="mt-4 text-lg md:text-xl">Build Your Career with GenNet - Where Innovation Meets Excellence</p>
+            <h1 class="text-4xl md:text-6xl font-bold mb-2">Join Our Family</h1>
+            <p class="mt-4 text-lg md:text-xl">We require individuals who are technically competent and highly driven by innovation, creativity, and excellence.</p>
         </div>
     </div>
 </section>
 
-<!-- ABOUT CAREERS -->
+<!-- CURRENT OPENINGS SECTION -->
 <section class="py-20 px-4 bg-gray-50">
-    <div class="max-w-4xl mx-auto text-center">
-        <h2 class="text-4xl font-bold mb-6">Why Work at GenNet?</h2>
-        <p class="text-lg text-gray-600 mb-12">
-            We're building a team of talented, passionate professionals who are committed to delivering cutting-edge IT solutions.
-            We offer competitive salaries, professional development, and a collaborative work environment.
-        </p>
+    <div class="max-w-6xl mx-auto">
+        <h2 class="text-4xl md:text-5xl font-bold mb-12 text-center">Current Openings</h2>
 
-        <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
-            <div class="p-6 bg-white rounded-lg shadow">
-                <i class="ri-briefcase-line text-4xl text-blue-600 mb-4 block"></i>
-                <h3 class="text-xl font-bold mb-2">Career Growth</h3>
-                <p class="text-gray-600">Continuous learning and professional development opportunities</p>
-            </div>
-            <div class="p-6 bg-white rounded-lg shadow">
-                <i class="ri-medal-line text-4xl text-yellow-600 mb-4 block"></i>
-                <h3 class="text-xl font-bold mb-2">Competitive Benefits</h3>
-                <p class="text-gray-600">Attractive salary packages, health insurance, and bonuses</p>
-            </div>
-            <div class="p-6 bg-white rounded-lg shadow">
-                <i class="ri-team-line text-4xl text-green-600 mb-4 block"></i>
-                <h3 class="text-xl font-bold mb-2">Team Environment</h3>
-                <p class="text-gray-600">Work with experienced professionals in a collaborative culture</p>
+        <!-- Search and Filter Bar -->
+        <div class="mb-12 bg-white p-6 rounded-lg shadow-md">
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-4 mb-4">
+                <!-- Search -->
+                <div class="relative">
+                    <input id="jobSearch" type="text" placeholder="Search jobs..." 
+                        class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-600">
+                    <i class="ri-search-line absolute right-3 top-3 text-gray-400"></i>
+                </div>
+
+                <!-- Job Type Filter -->
+                <div class="relative">
+                    <select class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-600 appearance-none cursor-pointer">
+                        <option>All Job Type</option>
+                        <option>Full Time</option>
+                        <option>Part Time</option>
+                        <option>Contract</option>
+                        <option>Internship</option>
+                    </select>
+                    <i class="ri-arrow-down-s-line absolute right-3 top-3 text-gray-400 pointer-events-none"></i>
+                </div>
+
+                <!-- Location Filter -->
+                <div class="relative">
+                    <select class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-600 appearance-none cursor-pointer">
+                        <option>All Job Location</option>
+                        <option>Dhaka</option>
+                        <option>Chittagong</option>
+                        <option>Sylhet</option>
+                        <option>Remote</option>
+                    </select>
+                    <i class="ri-arrow-down-s-line absolute right-3 top-3 text-gray-400 pointer-events-none"></i>
+                </div>
             </div>
         </div>
-    </div>
-</section>
 
-<!-- OPEN POSITIONS -->
-<section class="py-20 px-4">
-    <div class="max-w-6xl mx-auto">
-        <h2 class="text-4xl font-bold mb-12 text-center">Open Positions</h2>
-
-        <div class="space-y-6">
+        <!-- Job Listings -->
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
             <!-- Position 1 -->
-            <div class="p-8 bg-white shadow-lg rounded-lg hover:shadow-xl transition border-l-4 border-blue-600">
-                <div class="flex justify-between items-start mb-4">
-                    <div>
-                        <h3 class="text-2xl font-bold mb-2">Senior Software Engineer</h3>
-                        <p class="text-gray-600">Experience: 3+ Years</p>
-                    </div>
-                    <span class="px-4 py-2 bg-blue-100 text-blue-800 rounded-full text-sm font-semibold">Full-time</span>
+            <div class="job-card bg-gradient-to-r from-gray-400 to-white p-6 rounded border border-gray-300 hover:shadow-lg transition cursor-pointer group">
+                <h3 class="text-xl font-bold mb-4 group-hover:text-gray-800 transition text-gray-900">Assistant Manager, Corporate Sales, Business Development</h3>
+                <div class="space-y-2 text-gray-700">
+                    <p>Full Time</p>
+                    <p>Dhaka</p>
                 </div>
-                <p class="text-gray-700 mb-4">We're looking for a talented Senior Software Engineer to join our team and lead the development of innovative solutions. You'll work with modern technologies and contribute to transformative projects.</p>
-                <a href="#" class="inline-block bg-blue-600 text-white px-6 py-2 rounded hover:bg-blue-700">Apply Now</a>
+                <a href="#" class="text-blue-600 font-semibold hover:text-blue-700 mt-4 inline-block">
+                    More Details →
+                </a>
             </div>
 
             <!-- Position 2 -->
-            <div class="p-8 bg-white shadow-lg rounded-lg hover:shadow-xl transition border-l-4 border-purple-600">
-                <div class="flex justify-between items-start mb-4">
-                    <div>
-                        <h3 class="text-2xl font-bold mb-2">Cloud Architect</h3>
-                        <p class="text-gray-600">Experience: 5+ Years</p>
-                    </div>
-                    <span class="px-4 py-2 bg-purple-100 text-purple-800 rounded-full text-sm font-semibold">Full-time</span>
+            <div class="job-card bg-gradient-to-r from-gray-400 to-white p-6 rounded border border-gray-300 hover:shadow-lg transition cursor-pointer group">
+                <h3 class="text-xl font-bold mb-4 group-hover:text-gray-800 transition text-gray-900">Senior Executive, Corporate Sales, Business Development</h3>
+                <div class="space-y-2 text-gray-700">
+                    <p>Full Time</p>
+                    <p>Dhaka</p>
                 </div>
-                <p class="text-gray-700 mb-4">Design and implement scalable cloud solutions for enterprise clients. Lead architecture decisions and mentor junior team members in cloud technologies.</p>
-                <a href="#" class="inline-block bg-purple-600 text-white px-6 py-2 rounded hover:bg-purple-700">Apply Now</a>
+                <a href="#" class="text-blue-600 font-semibold hover:text-blue-700 mt-4 inline-block">
+                    More Details →
+                </a>
             </div>
 
             <!-- Position 3 -->
-            <div class="p-8 bg-white shadow-lg rounded-lg hover:shadow-xl transition border-l-4 border-red-600">
-                <div class="flex justify-between items-start mb-4">
-                    <div>
-                        <h3 class="text-2xl font-bold mb-2">Cybersecurity Analyst</h3>
-                        <p class="text-gray-600">Experience: 2+ Years</p>
-                    </div>
-                    <span class="px-4 py-2 bg-red-100 text-red-800 rounded-full text-sm font-semibold">Full-time</span>
+            <div class="job-card bg-gradient-to-r from-gray-400 to-white p-6 rounded border border-gray-300 hover:shadow-lg transition cursor-pointer group">
+                <h3 class="text-xl font-bold mb-4 group-hover:text-gray-800 transition text-gray-900">Sr. Executive/Ast, Manager – Merchant Acquisition Specialist (MAS)</h3>
+                <div class="space-y-2 text-gray-700">
+                    <p>Full Time</p>
+                    <p>Dhaka</p>
                 </div>
-                <p class="text-gray-700 mb-4">Help protect our clients' data and systems by identifying and mitigating security threats. Work with cutting-edge security tools and frameworks.</p>
-                <a href="#" class="inline-block bg-red-600 text-white px-6 py-2 rounded hover:bg-red-700">Apply Now</a>
+                <a href="#" class="text-blue-600 font-semibold hover:text-blue-700 mt-4 inline-block">
+                    More Details →
+                </a>
             </div>
 
             <!-- Position 4 -->
-            <div class="p-8 bg-white shadow-lg rounded-lg hover:shadow-xl transition border-l-4 border-green-600">
-                <div class="flex justify-between items-start mb-4">
-                    <div>
-                        <h3 class="text-2xl font-bold mb-2">Machine Learning Engineer</h3>
-                        <p class="text-gray-600">Experience: 2+ Years</p>
-                    </div>
-                    <span class="px-4 py-2 bg-green-100 text-green-800 rounded-full text-sm font-semibold">Full-time</span>
+            <div class="job-card bg-gradient-to-r from-gray-400 to-white p-6 rounded border border-gray-300 hover:shadow-lg transition cursor-pointer group">
+                <h3 class="text-xl font-bold mb-4 group-hover:text-gray-800 transition text-gray-900">Senior Executive /Assistant Manager, ICT Sales</h3>
+                <div class="space-y-2 text-gray-700">
+                    <p>Full Time</p>
+                    <p>Dhaka</p>
                 </div>
-                <p class="text-gray-700 mb-4">Develop and deploy machine learning models to solve real-world business problems. Collaborate with data scientists and software engineers to create intelligent solutions.</p>
-                <a href="#" class="inline-block bg-green-600 text-white px-6 py-2 rounded hover:bg-green-700">Apply Now</a>
+                <a href="#" class="text-blue-600 font-semibold hover:text-blue-700 mt-4 inline-block">
+                    More Details →
+                </a>
             </div>
 
             <!-- Position 5 -->
-            <div class="p-8 bg-white shadow-lg rounded-lg hover:shadow-xl transition border-l-4 border-indigo-600">
-                <div class="flex justify-between items-start mb-4">
-                    <div>
-                        <h3 class="text-2xl font-bold mb-2">IT Support Specialist</h3>
-                        <p class="text-gray-600">Experience: 1+ Years</p>
-                    </div>
-                    <span class="px-4 py-2 bg-indigo-100 text-indigo-800 rounded-full text-sm font-semibold">Full-time</span>
+            <div class="job-card bg-gradient-to-r from-gray-400 to-white p-6 rounded border border-gray-300 hover:shadow-lg transition cursor-pointer group">
+                <h3 class="text-xl font-bold mb-4 group-hover:text-gray-800 transition text-gray-900">Business Analyst</h3>
+                <div class="space-y-2 text-gray-700">
+                    <p>Full Time</p>
+                    <p>Dhaka</p>
                 </div>
-                <p class="text-gray-700 mb-4">Provide technical support to clients and internal teams. Troubleshoot issues, resolve tickets, and ensure customer satisfaction through excellent service delivery.</p>
-                <a href="#" class="inline-block bg-indigo-600 text-white px-6 py-2 rounded hover:bg-indigo-700">Apply Now</a>
+                <a href="#" class="text-blue-600 font-semibold hover:text-blue-700 mt-4 inline-block">
+                    More Details →
+                </a>
             </div>
 
             <!-- Position 6 -->
-            <div class="p-8 bg-white shadow-lg rounded-lg hover:shadow-xl transition border-l-4 border-orange-600">
-                <div class="flex justify-between items-start mb-4">
-                    <div>
-                        <h3 class="text-2xl font-bold mb-2">Digital Marketing Manager</h3>
-                        <p class="text-gray-600">Experience: 3+ Years</p>
-                    </div>
-                    <span class="px-4 py-2 bg-orange-100 text-orange-800 rounded-full text-sm font-semibold">Full-time</span>
+            <div class="job-card bg-gradient-to-r from-gray-400 to-white p-6 rounded border border-gray-300 hover:shadow-lg transition cursor-pointer group">
+                <h3 class="text-xl font-bold mb-4 group-hover:text-gray-800 transition text-gray-900">Executive/Sr. Executive, Sales – BFSI</h3>
+                <div class="space-y-2 text-gray-700">
+                    <p>Full Time</p>
+                    <p>Dhaka</p>
                 </div>
-                <p class="text-gray-700 mb-4">Lead our digital marketing initiatives and drive brand awareness. Develop marketing strategies, manage campaigns, and analyze performance metrics.</p>
-                <a href="#" class="inline-block bg-orange-600 text-white px-6 py-2 rounded hover:bg-orange-700">Apply Now</a>
+                <a href="#" class="text-blue-600 font-semibold hover:text-blue-700 mt-4 inline-block">
+                    More Details →
+                </a>
+            </div>
+
+            <!-- Position 7 -->
+            <div class="job-card bg-gradient-to-r from-gray-400 to-white p-6 rounded border border-gray-300 hover:shadow-lg transition cursor-pointer group">
+                <h3 class="text-xl font-bold mb-4 group-hover:text-gray-800 transition text-gray-900">Machine Learning Engineer</h3>
+                <div class="space-y-2 text-gray-700">
+                    <p>Full Time</p>
+                    <p>Dhaka</p>
+                </div>
+                <a href="#" class="text-blue-600 font-semibold hover:text-blue-700 mt-4 inline-block">
+                    More Details →
+                </a>
+            </div>
+
+            <!-- Position 8 -->
+            <div class="job-card bg-gradient-to-r from-gray-400 to-white p-6 rounded border border-gray-300 hover:shadow-lg transition cursor-pointer group">
+                <h3 class="text-xl font-bold mb-4 group-hover:text-gray-800 transition text-gray-900">Cybersecurity Analyst</h3>
+                <div class="space-y-2 text-gray-700">
+                    <p>Full Time</p>
+                    <p>Dhaka</p>
+                </div>
+                <a href="#" class="text-blue-600 font-semibold hover:text-blue-700 mt-4 inline-block">
+                    More Details →
+                </a>
+            </div>
+
+            <!-- Position 9 -->
+            <div class="job-card bg-gradient-to-r from-gray-400 to-white p-6 rounded border border-gray-300 hover:shadow-lg transition cursor-pointer group">
+                <h3 class="text-xl font-bold mb-4 group-hover:text-gray-800 transition text-gray-900">Assistant Manager/Deputy Manager/Manager, Software Sales, Enterprise Solution—Business Development</h3>
+                <div class="space-y-2 text-gray-700">
+                    <p>Full Time</p>
+                    <p>Dhaka</p>
+                </div>
+                <a href="#" class="text-blue-600 font-semibold hover:text-blue-700 mt-4 inline-block">
+                    More Details →
+                </a>
+            </div>
+        </div>
+
+        </div>
+    </div>
+</section>
+
+<!-- WHY WORK WITH US -->
+<section class="py-20 px-4 bg-white">
+    <div class="max-w-6xl mx-auto">
+        <h2 class="text-4xl font-bold mb-12 text-center">Why Work at GenNet?</h2>
+
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+            <div class="p-8 bg-gray-50 rounded-lg text-center hover:shadow-lg transition">
+                <i class="ri-lightbulb-flash-line text-5xl text-blue-600 mb-4 block"></i>
+                <h3 class="text-2xl font-bold mb-3">Innovation & Growth</h3>
+                <p class="text-gray-600">Work with cutting-edge technologies and grow your skills in a dynamic environment focused on innovation.</p>
+            </div>
+
+            <div class="p-8 bg-gray-50 rounded-lg text-center hover:shadow-lg transition">
+                <i class="ri-team-line text-5xl text-green-600 mb-4 block"></i>
+                <h3 class="text-2xl font-bold mb-3">Collaborative Culture</h3>
+                <p class="text-gray-600">Join a team of talented professionals committed to excellence and mutual support in achieving our goals.</p>
+            </div>
+
+            <div class="p-8 bg-gray-50 rounded-lg text-center hover:shadow-lg transition">
+                <i class="ri-trophy-line text-5xl text-yellow-600 mb-4 block"></i>
+                <h3 class="text-2xl font-bold mb-3">Competitive Benefits</h3>
+                <p class="text-gray-600">Enjoy competitive salaries, health insurance, bonuses, and professional development opportunities.</p>
             </div>
         </div>
     </div>
 </section>
 
-<!-- CTA SECTION -->
-<section class="py-20 px-4 bg-blue-600 text-white">
-    <div class="max-w-4xl mx-auto text-center">
-        <h2 class="text-4xl font-bold mb-6">Don't See Your Position?</h2>
-        <p class="text-xl mb-8">We're always looking for talented individuals. Send us your resume and let us know how you can contribute to GenNet.</p>
-        <a href="#" class="inline-block bg-white text-blue-600 hover:bg-gray-100 px-10 py-4 rounded-lg text-lg font-semibold">
-            Send Your Resume
-        </a>
-    </div>
-</section>
+<!-- SEARCH SCRIPT -->
+<script>
+document.getElementById("jobSearch").addEventListener("keyup", function () {
+    const searchText = this.value.toLowerCase();
+    const jobCards = document.querySelectorAll(".job-card");
+
+    jobCards.forEach(card => {
+        const title = card.querySelector("h3").textContent.toLowerCase();
+
+        if (title.includes(searchText)) {
+            card.style.display = "block";
+        } else {
+            card.style.display = "none";
+        }
+    });
+});
+</script>
+
 @endsection
