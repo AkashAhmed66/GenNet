@@ -74,58 +74,84 @@
 </section>
 
 <!-- SERVICES OVERVIEW SECTION -->
-<section id="services" class="py-15 px-4 bg-gray-50">
-    <div class="max-w-6xl mx-auto px-4 py-16">
-        <div class="max-w-4xl mx-auto text-center mb-16">
-            <h2 class="text-4xl md:text-5xl font-bold mb-4">Discover what we offer</h2>
-            <p class="text-lg md:text-xl text-gray-600">Comprehensive IT Solutions Tailored to Your Business Needs.
-                 Whether you’re modernizing your workflows, creating powerful digital platforms, or designing solutions to connect with your audience, we’re here to help you succeed.</p>
+<section id="services" class="py-20 px-4 bg-white">
+    <div class="max-w-6xl mx-auto">
+        <!-- Header -->
+        <div class="text-center mb-16">
+            <h2 class="text-5xl font-bold mb-6 text-gray-900">Our IT Solutions</h2>
+            <p class="text-lg text-gray-600 max-w-3xl mx-auto">Whether you're digitizing your operations, building enterprise software, or making an app to reach out to your customers, we have you covered.</p>
         </div>
 
-            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-                <!-- Cloud Solutions -->
-                <div class="bg-gradient-to-r from-gray-100 to-white p-5 rounded-lg border border-gray-300 shadow-lg hover:shadow-xl transition group flex flex-col items-center justify-center text-center cursor-pointer">
-                    <div class="w-12 h-12 bg-blue-100 rounded-full flex items-center justify-center mb-4">
-                        <i class="ri-cloud-line text-xl text-blue-600 group-hover:text-blue-800 transition"></i>
+        <!-- Services Grid -->
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+            <!-- Cloud Solutions -->
+            <div class="bg-white p-8 rounded-xl border border-gray-200 shadow-sm hover:shadow-lg transition-shadow duration-300 group cursor-pointer">
+                <div class="flex items-center gap-4 mb-4">
+                    <div class="w-14 h-14 bg-blue-100 rounded-xl flex items-center justify-center group-hover:bg-blue-600 transition-colors">
+                        <i class="ri-cloud-line text-2xl text-blue-600 group-hover:text-white transition-colors"></i>
                     </div>
-                    <h3 class="text-xl font-bold mb-2 group-hover:text-gray-800 transition">Cloud & VM Services</h3>
-                    <a href="{{ route('services.cloud') }}" class="text-blue-600 font-semibold group-hover:text-blue-800 transition">Learn More →</a>
                 </div>
+                <h3 class="text-xl font-bold mb-3 text-gray-900">Cloud & VM Services</h3>
+                <p class="text-gray-600 text-sm mb-4">Deploy secure, scalable virtual machines with 99.99% uptime</p>
+                <a href="{{ route('services.cloud') }}" class="text-blue-600 font-semibold hover:text-blue-700 inline-flex items-center gap-1">
+                    Learn More <i class="ri-arrow-right-line text-lg"></i>
+                </a>
+            </div>
 
-                <!-- Email & Hosting -->
-                <div class="bg-gradient-to-r from-gray-100 to-white p-6 rounded-lg border border-gray-300 shadow-lg hover:shadow-xl transition group flex flex-col items-center justify-center text-center cursor-pointer">
-                    <div class="w-12 h-12 bg-green-100 rounded-full flex items-center justify-center mb-4">
-                        <i class="ri-mail-line text-xl text-green-600 group-hover:text-green-800 transition"></i>
+            <!-- Email & Hosting -->
+            <div class="bg-white p-8 rounded-xl border border-gray-200 shadow-sm hover:shadow-lg transition-shadow duration-300 group cursor-pointer">
+                <div class="flex items-center gap-4 mb-4">
+                    <div class="w-14 h-14 bg-green-100 rounded-xl flex items-center justify-center group-hover:bg-green-600 transition-colors">
+                        <i class="ri-mail-line text-2xl text-green-600 group-hover:text-white transition-colors"></i>
                     </div>
-                    <h3 class="text-xl font-bold mb-2 group-hover:text-gray-800 transition">Email & Hosting Solutions</h3>
-                    <a href="{{ route('services.email') }}" class="text-green-600 font-semibold group-hover:text-green-800 transition">Learn More →</a>
                 </div>
+                <h3 class="text-xl font-bold mb-3 text-gray-900">Email & Hosting Solutions</h3>
+                <p class="text-gray-600 text-sm mb-4">Professional email with Office 365 & Google Workspace</p>
+                <a href="{{ route('services.email') }}" class="text-green-600 font-semibold hover:text-green-700 inline-flex items-center gap-1">
+                    Learn More <i class="ri-arrow-right-line text-lg"></i>
+                </a>
+            </div>
 
-                <!-- AI Solutions -->
-                <div class="bg-gradient-to-r from-gray-100 to-white p-6 rounded-lg border border-gray-300 shadow-lg hover:shadow-xl transition group flex flex-col items-center justify-center text-center cursor-pointer">
-                    <div class="w-12 h-12 bg-purple-100 rounded-full flex items-center justify-center mb-4">
-                        <i class="ri-brain-line text-xl text-purple-600 group-hover:text-purple-800 transition"></i>
+            <!-- AI Solutions -->
+            <div class="bg-white p-8 rounded-xl border border-gray-200 shadow-sm hover:shadow-lg transition-shadow duration-300 group cursor-pointer">
+                <div class="flex items-center gap-4 mb-4">
+                    <div class="w-14 h-14 bg-purple-100 rounded-xl flex items-center justify-center group-hover:bg-purple-600 transition-colors">
+                        <i class="ri-brain-line text-2xl text-purple-600 group-hover:text-white transition-colors"></i>
                     </div>
-                    <h3 class="text-xl font-bold mb-2 group-hover:text-gray-800 transition">AI Software Solutions</h3>
-                    <a href="{{ route('services.ai') }}" class="text-purple-600 font-semibold group-hover:text-purple-800 transition">Learn More →</a>
                 </div>
+                <h3 class="text-xl font-bold mb-3 text-gray-900">AI Software Solutions</h3>
+                <p class="text-gray-600 text-sm mb-4">Transform your business with intelligent automation</p>
+                <a href="{{ route('services.ai') }}" class="text-purple-600 font-semibold hover:text-purple-700 inline-flex items-center gap-1">
+                    Learn More <i class="ri-arrow-right-line text-lg"></i>
+                </a>
+            </div>
 
-                <!-- Security Solutions -->
-                <div class="bg-gradient-to-r from-gray-100 to-white p-6 rounded-lg border border-gray-300 shadow-lg hover:shadow-xl transition group flex flex-col items-center justify-center text-center cursor-pointer">
-                    <div class="w-12 h-12 bg-red-100 rounded-full flex items-center justify-center mb-4">
-                        <i class="ri-shield-lock-line text-xl text-red-600 group-hover:text-red-800 transition"></i>
+            <!-- Security Solutions -->
+            <div class="bg-white p-8 rounded-xl border border-gray-200 shadow-sm hover:shadow-lg transition-shadow duration-300 group cursor-pointer">
+                <div class="flex items-center gap-4 mb-4">
+                    <div class="w-14 h-14 bg-red-100 rounded-xl flex items-center justify-center group-hover:bg-red-600 transition-colors">
+                        <i class="ri-shield-lock-line text-2xl text-red-600 group-hover:text-white transition-colors"></i>
                     </div>
-                    <h3 class="text-xl font-bold mb-2 group-hover:text-gray-800 transition">AI-Powered Security</h3>
-                    <a href="{{ route('services.security') }}" class="text-red-600 font-semibold group-hover:text-red-800 transition">Learn More →</a>
                 </div>
+                <h3 class="text-xl font-bold mb-3 text-gray-900">AI-Powered Security</h3>
+                <p class="text-gray-600 text-sm mb-4">Real-time threat detection and prevention</p>
+                <a href="{{ route('services.security') }}" class="text-red-600 font-semibold hover:text-red-700 inline-flex items-center gap-1">
+                    Learn More <i class="ri-arrow-right-line text-lg"></i>
+                </a>
+            </div>
 
-                <!-- Surveillance -->
-                <div class="bg-gradient-to-r from-gray-100 to-white p-6 rounded-lg border border-gray-300 shadow-lg hover:shadow-xl transition group flex flex-col items-center justify-center text-center cursor-pointer">
-                    <div class="w-12 h-12 bg-yellow-100 rounded-full flex items-center justify-center mb-4">
-                        <i class="ri-camera-line text-xl text-yellow-600 group-hover:text-yellow-800 transition"></i>
+            <!-- Surveillance -->
+            <div class="bg-white p-8 rounded-xl border border-gray-200 shadow-sm hover:shadow-lg transition-shadow duration-300 group cursor-pointer">
+                <div class="flex items-center gap-4 mb-4">
+                    <div class="w-14 h-14 bg-yellow-100 rounded-xl flex items-center justify-center group-hover:bg-yellow-600 transition-colors">
+                        <i class="ri-camera-line text-2xl text-yellow-600 group-hover:text-white transition-colors"></i>
                     </div>
-                    <h3 class="text-xl font-bold mb-2 group-hover:text-gray-800 transition">24/7 Surveillance</h3>
-                    <a href="{{ route('services.surveillance') }}" class="text-yellow-600 font-semibold group-hover:text-yellow-800 transition">Learn More →</a>
+                </div>
+                <h3 class="text-xl font-bold mb-3 text-gray-900">24/7 Surveillance</h3>
+                <p class="text-gray-600 text-sm mb-4">Advanced monitoring with HD cameras and cloud storage</p>
+                <a href="{{ route('services.surveillance') }}" class="text-yellow-600 font-semibold hover:text-yellow-700 inline-flex items-center gap-1">
+                    Learn More <i class="ri-arrow-right-line text-lg"></i>
+                </a>
                 </div>
 
                 <!-- Network Services -->
