@@ -10,6 +10,7 @@ Route::get('/about-us', [WebsiteController::class, 'AboutUS'])->name('about');
 Route::get('/services', [WebsiteController::class, 'Services'])->name('services');
 Route::get('/news-events', [WebsiteController::class, 'NewsAndEvents'])->name('news');
 Route::get('/career', [WebsiteController::class, 'Career'])->name('career');
+Route::get('/contact', [WebsiteController::class, 'contact'])->name('contact');
 
 
 Route::get('/dashboard', function () {

@@ -58,9 +58,14 @@
 
     <a href="{{ route('about') }}" class="hover:text-blue-600 transition duration-200">About Us</a>
 
+   <nav class="flex items-center gap-6 relative">
+
     <!-- SERVICES DROPDOWN -->
     <div class="relative" id="servicesContainer">
-        <button id="servicesBtn" class="hover:text-blue-600 flex items-center gap-1 transition px-3 py-2 rounded-lg hover:bg-gray-100">
+
+        <!-- Button -->
+        <button id="servicesBtn"
+            class="hover:text-blue-600 flex items-center gap-1 transition px-3 py-2 rounded-lg hover:bg-gray-100">
             Services
             <svg id="arrowIcon" class="w-4 h-4 transition-transform duration-300" fill="none"
                 stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
@@ -68,47 +73,87 @@
             </svg>
         </button>
 
-        <!-- Dropdown -->
+        <!-- Dropdown Menu -->
         <div id="servicesMenu"
+
             class="hidden absolute left-0 mt-2 w-72 bg-white shadow-2xl rounded-xl py-2 z-50 border border-gray-200"
             style="max-height: 600px; overflow-y: auto;">
 
-            <a href="{{ route('services.cloud') }}" class="block px-4 py-3 hover:bg-blue-50 hover:text-blue-600 transition text-gray-700 text-sm">
+            <a href="{{ route('services.cloud') }}"
+                class="block px-4 py-3 hover:bg-blue-50 hover:text-blue-600 transition text-gray-700 text-sm">
                 <i class="ri-cloud-line mr-2 text-lg"></i><span>Cloud & VM Services</span>
             </a>
-            <a href="{{ route('services.email') }}" class="block px-4 py-3 hover:bg-green-50 hover:text-green-600 transition text-gray-700 text-sm">
+
+            <a href="{{ route('services.email') }}"
+                class="block px-4 py-3 hover:bg-green-50 hover:text-green-600 transition text-gray-700 text-sm">
                 <i class="ri-mail-line mr-2 text-lg"></i><span>Email & Hosting Solutions</span>
             </a>
-            <a href="{{ route('services.ai') }}" class="block px-4 py-3 hover:bg-purple-50 hover:text-purple-600 transition text-gray-700 text-sm">
+
+            <a href="{{ route('services.ai') }}"
+                class="block px-4 py-3 hover:bg-purple-50 hover:text-purple-600 transition text-gray-700 text-sm">
                 <i class="ri-brain-line mr-2 text-lg"></i><span>AI Software Solutions</span>
             </a>
-            <a href="{{ route('services.security') }}" class="block px-4 py-3 hover:bg-red-50 hover:text-red-600 transition text-gray-700 text-sm">
+
+            <a href="{{ route('services.security') }}"
+                class="block px-4 py-3 hover:bg-red-50 hover:text-red-600 transition text-gray-700 text-sm">
                 <i class="ri-shield-lock-line mr-2 text-lg"></i><span>AI-Powered Security</span>
             </a>
-            <a href="{{ route('services.surveillance') }}" class="block px-4 py-3 hover:bg-yellow-50 hover:text-yellow-600 transition text-gray-700 text-sm">
+
+            <a href="{{ route('services.surveillance') }}"
+                class="block px-4 py-3 hover:bg-yellow-50 hover:text-yellow-600 transition text-gray-700 text-sm">
                 <i class="ri-camera-line mr-2 text-lg"></i><span>24/7 Surveillance</span>
             </a>
-            <a href="{{ route('services.network') }}" class="block px-4 py-3 hover:bg-indigo-50 hover:text-indigo-600 transition text-gray-700 text-sm">
+
+            <a href="{{ route('services.network') }}"
+                class="block px-4 py-3 hover:bg-indigo-50 hover:text-indigo-600 transition text-gray-700 text-sm">
                 <i class="ri-router-line mr-2 text-lg"></i><span>Managed Network Services</span>
             </a>
-            <a href="{{ route('services.sms') }}" class="block px-4 py-3 hover:bg-pink-50 hover:text-pink-600 transition text-gray-700 text-sm">
+
+            <a href="{{ route('services.sms') }}"
+                class="block px-4 py-3 hover:bg-pink-50 hover:text-pink-600 transition text-gray-700 text-sm">
                 <i class="ri-chat-1-line mr-2 text-lg"></i><span>SMS Services</span>
             </a>
-            <a href="{{ route('services.microsoft') }}" class="block px-4 py-3 hover:bg-cyan-50 hover:text-cyan-600 transition text-gray-700 text-sm">
+
+            <a href="{{ route('services.microsoft') }}"
+                class="block px-4 py-3 hover:bg-cyan-50 hover:text-cyan-600 transition text-gray-700 text-sm">
                 <i class="ri-windows-fill mr-2 text-lg"></i><span>Microsoft Services</span>
             </a>
-            <a href="{{ route('services.call-center') }}" class="block px-4 py-3 hover:bg-orange-50 hover:text-orange-600 transition text-gray-700 text-sm">
+
+            <a href="{{ route('services.call-center') }}"
+                class="block px-4 py-3 hover:bg-orange-50 hover:text-orange-600 transition text-gray-700 text-sm">
                 <i class="ri-phone-line mr-2 text-lg"></i><span>Customized Call Center</span>
             </a>
 
         </div>
     </div>
 
+    <!-- Other Navbar Links -->
     <a href="{{ route('news') }}" class="hover:text-blue-600 transition duration-200">News & Events</a>
-
     <a href="{{ route('career') }}" class="hover:text-blue-600 transition duration-200">Career</a>
 </nav>
 
+
+<!-- ======================= JS FOR CLICKABLE DROPDOWN ======================= -->
+<script>
+    const servicesBtn = document.getElementById("servicesBtn");
+    const servicesMenu = document.getElementById("servicesMenu");
+    const arrowIcon = document.getElementById("arrowIcon");
+
+    // OPEN/CLOSE DROPDOWN ON CLICK
+    servicesBtn.addEventListener("click", function (e) {
+        e.stopPropagation();
+        servicesMenu.classList.toggle("hidden");
+        arrowIcon.classList.toggle("rotate-180");
+    });
+
+    // CLOSE WHEN CLICK OUTSIDE
+    document.addEventListener("click", function (e) {
+        if (!servicesMenu.contains(e.target) && !servicesBtn.contains(e.target)) {
+            servicesMenu.classList.add("hidden");
+            arrowIcon.classList.remove("rotate-180");
+        }
+    });
+</script>
 
 
             <!-- Mobile Menu Button -->

@@ -30,4 +30,10 @@ class WebsiteController extends Controller
     {
         return view('website.career');
     }
-}
+
+    public function ContactUS()
+    {
+        return view('website.contact');
+    }
+
+};
