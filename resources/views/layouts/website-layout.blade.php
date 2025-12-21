@@ -40,11 +40,29 @@
 
     <a href="{{ route('home') }}" class="hover:text-blue-600 transition duration-200">Home</a>
 
-    <a href="{{ route('about') }}" class="hover:text-blue-600 transition duration-200">About Us</a>
+    <!-- ABOUT US DROPDOWN -->
+    <div class="relative">
+        <button type="button" id="aboutBtn" class="hover:text-blue-600 flex items-center gap-1 transition cursor-pointer">
+            About Us
+            <svg id="aboutArrow" class="w-4 h-4 transition-transform duration-300" fill="none"
+                stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+                <path d="M19 9l-7 7-7-7" />
+            </svg>
+        </button>
+
+        <!-- Dropdown -->
+        <div id="aboutMenu"
+            class="hidden absolute left-0 mt-2 w-48 bg-white shadow-xl rounded-2xl py-4 z-50 border border-gray-100">
+
+            <a href="{{ route('about.company') }}" class="block px-6 py-3 text-gray-700 hover:bg-blue-50 hover:text-blue-600 transition">Our Company</a>
+            <a href="{{ route('about.milestone') }}" class="block px-6 py-3 text-gray-700 hover:bg-blue-50 hover:text-blue-600 transition">Our Milestones</a>
+            <a href="{{ route('about.certification') }}" class="block px-6 py-3 text-gray-700 hover:bg-blue-50 hover:text-blue-600 transition">Our Certifications</a>
+        </div>
+    </div>
 
     <!-- SERVICES DROPDOWN -->
-    <div class="relative group">
-        <button id="servicesBtn" class="hover:text-blue-600 flex items-center gap-1 transition">
+    <div class="relative">
+        <button type="button" id="servicesBtn" class="hover:text-blue-600 flex items-center gap-1 transition cursor-pointer">
             Services
             <svg id="arrowIcon" class="w-4 h-4 transition-transform duration-300" fill="none"
                 stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
@@ -54,7 +72,7 @@
 
         <!-- Dropdown -->
         <div id="servicesMenu"
-            class="hidden absolute left-0 mt-4 w-80 bg-white shadow-xl rounded-2xl py-4 z-50 border border-gray-100">
+            class="hidden absolute left-0 mt-2 w-80 bg-white shadow-xl rounded-2xl py-4 z-50 border border-gray-100">
 
             <a href="#" class="block px-6 py-2 text-gray-700 hover:bg-gray-100">Application Development</a>
             <a href="#" class="block px-6 py-2 text-gray-700 hover:bg-gray-100">Banking & Financial Services</a>
@@ -86,7 +104,22 @@
             <div id="mobileMenu" class="hidden bg-white shadow-md border-t">
                 <nav class="px-6 py-4 space-y-4 text-lg">
                     <a href="{{ route('home') }}" class="block hover:text-blue-600">Home</a>
-                    <a href="{{ route('about') }}" class="block hover:text-blue-600">About Us</a>
+                    
+                    <!-- Mobile About Us Dropdown -->
+                    <div>
+                        <button id="mobileAboutBtn" class="w-full text-left flex justify-between items-center hover:text-blue-600">
+                            About Us
+                            <svg id="mobileAboutArrow" class="w-4 h-4 transition-transform duration-300" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+                                <path d="M19 9l-7 7-7-7" />
+                            </svg>
+                        </button>
+                        <div id="mobileAboutMenu" class="hidden pl-4 mt-2 space-y-2 border-l-2 border-blue-600">
+                            <a href="{{ route('about.company') }}" class="block text-gray-700 hover:text-blue-600">Our Company</a>
+                            <a href="{{ route('about.milestone') }}" class="block text-gray-700 hover:text-blue-600">Our Milestones</a>
+                            <a href="{{ route('about.certification') }}" class="block text-gray-700 hover:text-blue-600">Our Certifications</a>
+                        </div>
+                    </div>
+                    
                     <a href="{{ route('services') }}" class="block hover:text-blue-600">Services</a>
                     <a href="{{ route('news') }}" class="block hover:text-blue-600">News & Events</a>
                     <a href="{{ route('career') }}" class="block hover:text-blue-600">Career</a>
@@ -112,35 +145,71 @@
     </main>
 
     <script>
-    feather.replace();
+        document.addEventListener("DOMContentLoaded", function() {
+            feather.replace();
 
-    const menuBtn = document.getElementById("menuBtn");
-    const mobileMenu = document.getElementById("mobileMenu");
+            // Mobile Menu Toggle
+            const menuBtn = document.getElementById("menuBtn");
+            const mobileMenu = document.getElementById("mobileMenu");
 
-    menuBtn.addEventListener("click", () => {
-        mobileMenu.classList.toggle("hidden");
-    });
-</script>
+            if (menuBtn) {
+                menuBtn.addEventListener("click", () => {
+                    mobileMenu.classList.toggle("hidden");
+                });
+            }
 
-<!-- ✅ Services Dropdown Script (Place Here) -->
-<script>
-    const servicesBtn = document.getElementById("servicesBtn");
-    const servicesMenu = document.getElementById("servicesMenu");
-    const arrowIcon = document.getElementById("arrowIcon");
+            // About Us Dropdown (Desktop)
+            const aboutBtn = document.getElementById("aboutBtn");
+            const aboutMenu = document.getElementById("aboutMenu");
+            const aboutArrow = document.getElementById("aboutArrow");
 
-    servicesBtn && servicesBtn.addEventListener("click", () => {
-        servicesMenu.classList.toggle("hidden");
-        arrowIcon.classList.toggle("rotate-180");
-    });
+            if (aboutBtn) {
+                aboutBtn.addEventListener("click", function(e) {
+                    e.stopPropagation();
+                    aboutMenu.classList.toggle("hidden");
+                    aboutArrow.classList.toggle("rotate-180");
+                });
+            }
 
-    // Close dropdown when clicking outside
-    document.addEventListener("click", (e) => {
-        if (!servicesBtn.contains(e.target) && !servicesMenu.contains(e.target)) {
-            servicesMenu.classList.add("hidden");
-            arrowIcon.classList.remove("rotate-180");
-        }
-    });
-</script>
+            // Services Dropdown (Desktop)
+            const servicesBtn = document.getElementById("servicesBtn");
+            const servicesMenu = document.getElementById("servicesMenu");
+            const arrowIcon = document.getElementById("arrowIcon");
+
+            if (servicesBtn) {
+                servicesBtn.addEventListener("click", function(e) {
+                    e.stopPropagation();
+                    servicesMenu.classList.toggle("hidden");
+                    arrowIcon.classList.toggle("rotate-180");
+                });
+            }
+
+            // Close dropdowns when clicking outside
+            document.addEventListener("click", function(e) {
+                if (aboutBtn && !aboutBtn.contains(e.target) && !aboutMenu.contains(e.target)) {
+                    aboutMenu.classList.add("hidden");
+                    if (aboutArrow) aboutArrow.classList.remove("rotate-180");
+                }
+                if (servicesBtn && !servicesBtn.contains(e.target) && !servicesMenu.contains(e.target)) {
+                    servicesMenu.classList.add("hidden");
+                    if (arrowIcon) arrowIcon.classList.remove("rotate-180");
+                }
+            });
+
+            // Mobile About Us Dropdown
+            const mobileAboutBtn = document.getElementById("mobileAboutBtn");
+            const mobileAboutMenu = document.getElementById("mobileAboutMenu");
+            const mobileAboutArrow = document.getElementById("mobileAboutArrow");
+
+            if (mobileAboutBtn) {
+                mobileAboutBtn.addEventListener("click", function(e) {
+                    e.stopPropagation();
+                    mobileAboutMenu.classList.toggle("hidden");
+                    if (mobileAboutArrow) mobileAboutArrow.classList.toggle("rotate-180");
+                });
+            }
+        });
+    </script>
 
 
     <!-- FOOTER -->
@@ -159,7 +228,7 @@
             <div>
                 <h3 class="text-xl font-semibold text-white mb-4">Quick Links</h3>
                 <ul class="space-y-2">
-                    <li><a href="{{ route('about') }}" class="hover:text-white">About Us</a></li>
+                    <li><a href="{{ route('about.company') }}" class="hover:text-white">About Us</a></li>
                     <li><a href="{{ route('services') }}" class="hover:text-white">Services</a></li>
                     <li><a href="{{ route('news') }}" class="hover:text-white">News & Events</a></li>
                     <li><a href="{{ route('career') }}" class="hover:text-white">Career</a></li>

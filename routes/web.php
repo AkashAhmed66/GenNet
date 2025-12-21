@@ -7,6 +7,9 @@ use Illuminate\Support\Facades\Route;
 
 Route::get('/', [WebsiteController::class, 'Home'])->name('home');
 Route::get('/about-us', [WebsiteController::class, 'AboutUS'])->name('about');
+Route::get('/about-us/company', function () { return view('website.about.company'); })->name('about.company');
+Route::get('/about-us/milestone', function () { return view('website.about.milestone'); })->name('about.milestone');
+Route::get('/about-us/certification', function () { return view('website.about.certification'); })->name('about.certification');
 Route::get('/services', [WebsiteController::class, 'Services'])->name('services');
 Route::get('/news-events', [WebsiteController::class, 'NewsAndEvents'])->name('news');
 Route::get('/career', [WebsiteController::class, 'Career'])->name('career');
